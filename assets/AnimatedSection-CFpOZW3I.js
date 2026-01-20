@@ -1,0 +1,1 @@
+import{j as a,m as r}from"./index-BTwioxuo.js";const m=({children:t,className:i,id:e,delay:o=0,...n})=>a.jsx(r.section,{id:e,className:i,initial:{opacity:0,y:30},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:"-100px"},transition:{duration:.6,delay:o,ease:"easeOut"},...n,children:t});export{m as A};
