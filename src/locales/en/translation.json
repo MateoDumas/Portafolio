@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "process": "Process",
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggle_open": "Open navigation menu",
+    "toggle_close": "Close navigation menu"
+  },
+  "hero": {
+    "kicker": "Mateo Dumas",
+    "title": "Junior Full Stack Developer",
+    "subtitle": "Systems Engineering student passionate about creating scalable web solutions. Looking to join an innovative team to contribute my skills in the MERN stack and continue growing professionally.",
+    "cta_primary": "I'm available",
+    "cta_secondary": "View portfolio",
+    "cta_cv": "Download CV",
+    "badge": "Junior Full Stack Dev",
+    "years": "Years coding",
+    "student": "Systems Student"
+  },
+  "about": {
+    "kicker": "About Me",
+    "title": "Engineering student focused on modern and scalable web development.",
+    "body1": "I am a Junior Full Stack Developer in constant training, studying Systems Engineering. I combine a solid theoretical base with intensive practice in modern technologies such as the MERN stack (MongoDB, Express, React, Node.js) and Next.js.",
+    "body2": "I stand out for my proactivity and ability to solve technical problems. I have developed complex projects such as marketplaces and real-time applications, demonstrating that I can contribute value from day one. I am looking for my first formal professional experience to grow alongside an experienced team.",
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "title": "Information Systems Engineering",
+          "desc": "In progress (1st Level)"
+        },
+        {
+          "title": "Web Development Student",
+          "desc": "National Technological University | 2024"
+        },
+        {
+          "title": "Introductory Programming with Python",
+          "desc": "TalentoTech | 2024"
+        }
+      ]
+    }
+  },
+  "skills": {
+    "kicker": "Technical & Soft Skills",
+    "title": "A balanced profile between quality code and human collaboration.",
+    "categories": {
+      "frontend": "Modern Frontend",
+      "backend": "Backend & APIs",
+      "tools": "Tools & DevOps",
+      "soft": "Soft Skills"
+    },
+    "items": {
+      "teamwork": "Teamwork",
+      "communication": "Effective Communication",
+      "learning": "Agile Learning",
+      "problem_solving": "Problem Solving",
+      "english": "Technical English"
+    }
+  },
+  "process": {
+    "kicker": "Process",
+    "title": "A clear flow from idea to final interface.",
+    "steps": {
+      "discovery": {
+        "title": "1. Discovery",
+        "description": "I understand the project context, user type, and product goals to define the scope."
+      },
+      "structure": {
+        "title": "2. Structure & Design",
+        "description": "I define information architecture, wireframes, and a coherent visual system that translates into components."
+      },
+      "development": {
+        "title": "3. Frontend Development",
+        "description": "I implement the interface with React and modern CSS, taking care of accessibility, performance, and code maintainability."
+      },
+      "delivery": {
+        "title": "4. Iteration & Delivery",
+        "description": "We test, polish micro-interactions, and document the result to facilitate product evolution."
+      }
+    }
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Have a project in mind?",
+    "body": "Fill out the form and I'll respond with possible solutions, user flows, and an interface proposal adapted to your product.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send message",
+      "error": "Please check the required fields before sending.",
+      "success": "Thanks for your message. This demo doesn't send emails, but the flow is ready for integration."
+    }
+  },
+  "projects_section": {
+    "kicker": "Projects",
+    "title": "Examples of scalable interfaces and applications.",
+    "filters": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full Stack"
+    },
+    "view_detail": "View full detail →"
+  },
+  "project_detail": {
+    "back": "← Back to projects",
+    "not_found": "Project not found",
+    "not_found_desc": "ID \"{{id}}\" does not match any project.",
+    "back_home": "Back to home",
+    "demo": "View Demo",
+    "repo": "Repository"
+  },
+  "projects": {
+    "prontoclick": {
+      "title": "ProntoClick",
+      "role": "Full Stack Developer",
+      "description": "Comprehensive delivery and marketplace platform with real-time chat and geolocation.",
+      "fullDescription": "Full-Stack delivery and marketplace platform built with a modern and scalable architecture. This project demonstrates my ability to handle complex business logic, secure authentication, and real-time state management. It integrates a robust backend in NestJS with Prisma ORM and PostgreSQL database. The frontend in Next.js prioritizes speed and SEO. I implemented WebSockets for chat and geolocation, solving the challenge of instant communication between actors.",
+      "features": [
+        "Real-time Chat (WebSockets) - Fluid communication",
+        "Live Geolocation - Order tracking",
+        "MVC/Modular Architecture in Backend",
+        "Optimized Relational Database (PostgreSQL)",
+        "Secure Authentication and Authorization"
+      ]
+    },
+    "holoself": {
+      "title": "HoloSelf",
+      "role": "Frontend Developer",
+      "description": "Interactive 3D and Augmented Reality (AR) catalog for web product visualization.",
+      "fullDescription": "Immersive application that takes e-commerce to the next level. This project highlights my ability to learn and implement emerging and complex technologies like WebXR and Three.js. It allows users to visualize products in 3D with high detail and project them into their real environment. The main challenge was optimizing 3D model performance to ensure a fluid experience even on mobile devices.",
+      "features": [
+        "Interactive 3D model visualization",
+        "Augmented Reality (WebXR) support",
+        "Immersive browser experience",
+        "3D model optimization for web",
+        "Minimalist and modern user interface"
+      ]
+    },
+    "cyberretro": {
+      "title": "CyberRetro",
+      "role": "Frontend Developer",
+      "description": "Nostalgic landing page with Y2K/90s aesthetic and modern visual effects with pure CSS.",
+      "fullDescription": "A trip to the past with the power of modern web technologies. This landing page captures the unique aesthetic of the 90s and 2000s (Y2K) using pure HTML, CSS, and JavaScript, without heavy dependencies. It features custom cursor trails, starfield backgrounds, interactive glitch effects, and a retro user interface, all optimized to run smoothly on current browsers and mobile devices.",
+      "features": [
+        "Authentic Y2K / Retro aesthetic",
+        "Glitch and CRT effects purely in CSS",
+        "Interactive cursor trail",
+        "No dependencies (Vanilla JS/CSS)",
+        "Fully responsive design"
+      ]
+    },
+    "bubbleverse": {
+      "title": "BubbleVerse",
+      "role": "Frontend Developer",
+      "description": "Interactive playground that turns the browser into a dynamic canvas of floating bubbles.",
+      "fullDescription": "Dynamic and experimental web canvas built with pure JavaScript. Allows users to create floating bubbles containing inspiring messages, toggle between day and night visual themes, and observe physical particle interactions. It is a project focused on creativity, efficient DOM manipulation, and creating fluid and relaxing animations.",
+      "features": [
+        "Dynamic DOM element generation",
+        "Toggleable visual themes (Day/Night)",
+        "Fluid physical animations",
+        "Creative user interaction"
+      ]
+    },
+    "aivio": {
+      "title": "Aivio AI Backend",
+      "role": "Backend & ML Engineer",
+      "description": "AI backend platform with REST APIs and documentation section for developers.",
+      "fullDescription": "Aivio is a backend platform oriented towards AI assistants that centralizes all business logic and API exposure. It includes a core of services in Node.js and Express to manage authentication, users, and conversation sessions, as well as integration with external AI models. In addition, it has its own documentation section where endpoints, data schemas, and request/response examples are explained, designed so that other developers can consume the API without friction. The project focuses on best practices in architecture, security, and folder structure.",
+      "features": [
+        "REST API organized in layers (routes, controllers, and services)",
+        "Integration with AI models via OpenAI API",
+        "JWT-based authentication and authorization",
+        "User and session persistence in MongoDB",
+        "Documentation section with endpoint descriptions and usage examples",
+        "Configuration ready for cloud deployment"
+      ]
+    }
+  },
+  "footer": {
+    "text": "© {{year}} Mateo Dumas. All rights reserved."
+  }
+}

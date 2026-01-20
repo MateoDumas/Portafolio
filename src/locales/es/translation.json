@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "process": "Proceso",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "toggle_open": "Abrir menú de navegación",
+    "toggle_close": "Cerrar menú de navegación"
+  },
+  "hero": {
+    "kicker": "Mateo Dumas",
+    "title": "Desarrollador Full Stack Junior",
+    "subtitle": "Estudiante de Ingeniería en Sistemas apasionado por crear soluciones web escalables. Busco unirme a un equipo innovador para aportar mis habilidades en el stack MERN y seguir creciendo profesionalmente.",
+    "cta_primary": "Estoy disponible",
+    "cta_secondary": "Ver portafolio",
+    "cta_cv": "Descargar CV",
+    "badge": "Junior Full Stack Dev",
+    "years": "Años programando",
+    "student": "Estudiante Sistemas"
+  },
+  "about": {
+    "kicker": "Sobre mí",
+    "title": "Estudiante de ingeniería enfocado en desarrollo web moderno y escalable.",
+    "body1": "Soy un desarrollador Full Stack Junior en formación constante, cursando la carrera de Ingeniería en Sistemas. Combino una sólida base teórica con práctica intensiva en tecnologías modernas como el stack MERN (MongoDB, Express, React, Node.js) y Next.js.",
+    "body2": "Me destaco por mi proactividad y capacidad para resolver problemas técnicos. He desarrollado proyectos complejos como marketplaces y aplicaciones en tiempo real, demostrando que puedo aportar valor desde el primer día. Busco mi primera experiencia profesional formal para crecer junto a un equipo experimentado.",
+    "education": {
+      "title": "Educación",
+      "items": [
+        {
+          "title": "Ingeniería en Sistemas de Información",
+          "desc": "En curso (1er Nivel)"
+        },
+        {
+          "title": "Estudiante de Desarrollo Web",
+          "desc": "Universidad Tecnológica Nacional | 2024"
+        },
+        {
+          "title": "Programación Introductoria con Python",
+          "desc": "TalentoTech | 2024"
+        }
+      ]
+    }
+  },
+  "skills": {
+    "kicker": "Habilidades Técnicas y Personales",
+    "title": "Un perfil equilibrado entre código de calidad y colaboración humana.",
+    "categories": {
+      "frontend": "Frontend Moderno",
+      "backend": "Backend & APIs",
+      "tools": "Herramientas & DevOps",
+      "soft": "Habilidades Blandas"
+    },
+    "items": {
+      "teamwork": "Trabajo en Equipo",
+      "communication": "Comunicación Efectiva",
+      "learning": "Aprendizaje Ágil",
+      "problem_solving": "Resolución de Problemas",
+      "english": "Inglés Técnico"
+    }
+  },
+  "process": {
+    "kicker": "Proceso",
+    "title": "Un flujo claro desde la idea hasta la interfaz final.",
+    "steps": {
+      "discovery": {
+        "title": "1. Descubrimiento",
+        "description": "Entiendo el contexto del proyecto, el tipo de usuario y los objetivos del producto para definir el alcance."
+      },
+      "structure": {
+        "title": "2. Estructura y diseño",
+        "description": "Defino arquitectura de información, wireframes y un sistema visual coherente que luego se traduce a componentes."
+      },
+      "development": {
+        "title": "3. Desarrollo frontend",
+        "description": "Implemento la interfaz con React y CSS moderno, cuidando accesibilidad, rendimiento y mantenibilidad del código."
+      },
+      "delivery": {
+        "title": "4. Iteración y entrega",
+        "description": "Testeamos, pulimos microinteracciones y documentamos el resultado para facilitar la evolución del producto."
+      }
+    }
+  },
+  "contact": {
+    "kicker": "Contacto",
+    "title": "¿Tienes un proyecto en mente?",
+    "body": "Completa el formulario y te responderé con posibles soluciones, flujos de usuario y una propuesta de interfaz adaptada a tu producto.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "error": "Revisa los campos obligatorios antes de enviar.",
+      "success": "Gracias por tu mensaje. Esta demo no envía correos, pero el flujo está listo para integrarse."
+    }
+  },
+  "projects_section": {
+    "kicker": "Proyectos",
+    "title": "Ejemplos de interfaces y aplicaciones escalables.",
+    "filters": {
+      "all": "Todos",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full Stack"
+    },
+    "view_detail": "Ver detalle completo →"
+  },
+  "project_detail": {
+    "back": "← Volver a proyectos",
+    "not_found": "Proyecto no encontrado",
+    "not_found_desc": "El ID \"{{id}}\" no coincide con ningún proyecto.",
+    "back_home": "Volver al inicio",
+    "demo": "Ver Demo",
+    "repo": "Repositorio"
+  },
+  "projects": {
+    "prontoclick": {
+      "title": "ProntoClick",
+      "role": "Full Stack Developer",
+      "description": "Plataforma integral de delivery y marketplace con chat en tiempo real y geolocalización.",
+      "fullDescription": "Plataforma Full-Stack de delivery y marketplace construida con una arquitectura moderna y escalable. Este proyecto demuestra mi capacidad para manejar lógica de negocio compleja, autenticación segura y gestión de estado en tiempo real. Integra un backend robusto en NestJS con Prisma ORM y base de datos PostgreSQL. El frontend en Next.js prioriza la velocidad y el SEO. Implementé WebSockets para el chat y geolocalización, solucionando el desafío de la comunicación instantánea entre actores.",
+      "features": [
+        "Chat en tiempo real (WebSockets) - Comunicación fluida",
+        "Geolocalización en vivo - Seguimiento de pedidos",
+        "Arquitectura MVC/Modular en Backend",
+        "Base de datos relacional optimizada (PostgreSQL)",
+        "Autenticación y Autorización segura"
+      ]
+    },
+    "holoself": {
+      "title": "HoloSelf",
+      "role": "Frontend Developer",
+      "description": "Catálogo interactivo 3D y de Realidad Aumentada (AR) para visualización de productos en web.",
+      "fullDescription": "Aplicación inmersiva que lleva el comercio electrónico al siguiente nivel. Este proyecto destaca mi habilidad para aprender e implementar tecnologías emergentes y complejas como WebXR y Three.js. Permite a los usuarios visualizar productos en 3D con alto detalle y proyectarlos en su entorno real. El desafío principal fue optimizar el rendimiento de los modelos 3D para asegurar una experiencia fluida incluso en dispositivos móviles.",
+      "features": [
+        "Visualización de modelos 3D interactivos",
+        "Soporte de Realidad Aumentada (WebXR)",
+        "Experiencia inmersiva en el navegador",
+        "Optimización de modelos 3D para web",
+        "Interfaz de usuario minimalista y moderna"
+      ]
+    },
+    "cyberretro": {
+      "title": "CyberRetro",
+      "role": "Frontend Developer",
+      "description": "Landing page nostálgica con estética Y2K/90s y efectos visuales modernos con CSS puro.",
+      "fullDescription": "Un viaje al pasado con la potencia de las tecnologías web modernas. Esta landing page captura la estética única de los años 90 y 2000 (Y2K) utilizando HTML, CSS y JavaScript puro, sin dependencias pesadas. Cuenta con rastros de cursor personalizados, fondos de campos de estrellas, efectos glitch interactivos y una interfaz de usuario retro, todo optimizado para funcionar fluidamente en navegadores actuales y dispositivos móviles.",
+      "features": [
+        "Estética Y2K / Retro auténtica",
+        "Efectos glitch y CRT puramente en CSS",
+        "Rastro de cursor interactivo",
+        "Sin dependencias (Vanilla JS/CSS)",
+        "Diseño totalmente responsivo"
+      ]
+    },
+    "bubbleverse": {
+      "title": "BubbleVerse",
+      "role": "Frontend Developer",
+      "description": "Playground interactivo que convierte el navegador en un lienzo dinámico de burbujas flotantes.",
+      "fullDescription": "Lienzo web dinámico y experimental construido con JavaScript puro. Permite a los usuarios crear burbujas flotantes que contienen mensajes inspiradores, alternar entre temas visuales de día y noche, y observar interacciones físicas de partículas. Es un proyecto centrado en la creatividad, la manipulación eficiente del DOM y la creación de animaciones fluidas y relajantes.",
+      "features": [
+        "Generación dinámica de elementos DOM",
+        "Temas visuales alternables (Día/Noche)",
+        "Animaciones físicas fluidas",
+        "Interacción creativa con el usuario"
+      ]
+    },
+    "aivio": {
+      "title": "Aivio AI Backend",
+      "role": "Backend & ML Engineer",
+      "description": "Plataforma backend de IA con APIs REST y sección de documentación para desarrolladores.",
+      "fullDescription": "Aivio es una plataforma backend orientada a asistentes de IA que centraliza toda la lógica de negocio y la exposición de APIs. Incluye un core de servicios en Node.js y Express para gestionar autenticación, usuarios y sesiones de conversación, así como la integración con modelos de IA externos. Además, cuenta con una sección de documentación propia donde se explican los endpoints, los esquemas de datos y ejemplos de requests/responses, pensada para que otros desarrolladores puedan consumir la API sin fricción. El proyecto pone foco en buenas prácticas de arquitectura, seguridad y estructura de carpetas.",
+      "features": [
+        "API REST organizada en capas (rutas, controladores y servicios)",
+        "Integración con modelos de IA mediante OpenAI API",
+        "Autenticación y autorización basada en JWT",
+        "Persistencia de usuarios y sesiones en MongoDB",
+        "Sección de documentación con descripción de endpoints y ejemplos de uso",
+        "Configuración lista para deploy en servicios en la nube"
+      ]
+    }
+  },
+  "footer": {
+    "text": "© {{year}} Mateo Dumas. Todos los derechos reservados."
+  }
+}

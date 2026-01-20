@@ -1,0 +1,96 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: #e5e7eb;
+  background-color: #020617;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-body-bg: #020617;
+  --color-surface-soft: rgba(15, 23, 42, 0.85);
+  --color-surface-strong: #020617;
+  --color-border-subtle: rgba(148, 163, 184, 0.25);
+  --color-border-soft: rgba(148, 163, 184, 0.45);
+
+  --color-text: #e5e7eb;
+  --color-text-soft: #d1d5db;
+  --color-text-muted: #9ca3af;
+  --color-heading: #f9fafb;
+
+  --color-primary: #f9fafb;
+  --color-secondary: #e5e7eb;
+  --color-tertiary: #9ca3af;
+
+  --color-accent: #f9fafb;
+  --color-accent-soft: #e5e7eb;
+
+  --color-error: #f97373;
+  --color-success: #4ade80;
+
+  --shadow-glow: 0 0 24px rgba(15, 23, 42, 0.9);
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  
+  --color-body-bg: #f8fafc; /* Slate 50 */
+  --color-surface-soft: rgba(255, 255, 255, 0.9);
+  --color-surface-strong: #ffffff;
+  --color-border-subtle: rgba(15, 23, 42, 0.08);
+  --color-border-soft: rgba(15, 23, 42, 0.15);
+  
+  --color-text: #1e293b; /* Slate 800 */
+  --color-text-soft: #334155; /* Slate 700 */
+  --color-text-muted: #64748b; /* Slate 500 */
+  --color-heading: #0f172a; /* Slate 900 */
+  
+  --color-primary: #0f172a; /* Black/Slate 900 */
+  --color-secondary: #334155; /* Slate 700 */
+  --color-tertiary: #475569; /* Slate 600 */
+  
+  --color-accent: #0f172a;
+  --color-accent-soft: #334155;
+  
+  --shadow-glow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+  transition: all 0.2s ease;
+}
+a:hover {
+  color: var(--color-secondary);
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-body-bg);
+}
+
+button {
+  font-size: 1rem;
+  font-family: inherit;
+}
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
