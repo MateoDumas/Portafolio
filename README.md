@@ -1,16 +1,80 @@
-# React + Vite
+# Portafolio de Mateo Dumas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido al repositorio de mi portafolio personal. Este proyecto es una aplicación web moderna diseñada para mostrar mis habilidades como Desarrollador Full Stack, mis proyectos y mi trayectoria profesional.
 
-Currently, two official plugins are available:
+🔗 **Demo en vivo:** [Ver Portafolio](https://mateodumas.github.io/Portafolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Descripción
 
-## React Compiler
+Este portafolio fue construido desde cero utilizando **React** y **Vite**, enfocado en el rendimiento, la accesibilidad y una experiencia de usuario fluida. Incluye soporte para múltiples idiomas (Español e Inglés), animaciones interactivas y un diseño totalmente responsivo.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Características
 
-## Expanding the ESLint configuration
+- **Diseño Responsivo:** Adaptable a dispositivos móviles, tablets y escritorio.
+- **Internacionalización (i18n):** Soporte completo para Español e Inglés con cambio de idioma dinámico.
+- **Animaciones Suaves:** Transiciones de página y efectos de scroll utilizando `framer-motion`.
+- **Detalle de Proyectos:** Páginas dedicadas para cada proyecto con soporte para videos (YouTube y local) y galerías.
+- **Modo Oscuro/Claro:** (Preparado para futura implementación, estructura base lista).
+- **Routing:** Navegación SPA (Single Page Application) fluida con `react-router-dom`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologías
+
+### Core
+- **[React](https://react.dev/)**: Biblioteca principal para la interfaz de usuario.
+- **[Vite](https://vitejs.dev/)**: Entorno de desarrollo y bundler ultrarrápido.
+
+### Estilos y Animaciones
+- **CSS3**: Variables CSS y diseño moderno (Flexbox/Grid).
+- **[Framer Motion](https://www.framer.com/motion/)**: Biblioteca para animaciones de producción.
+
+### Utilidades
+- **[i18next](https://www.i18next.com/)** & **react-i18next**: Gestión de traducciones.
+- **React Router DOM**: Manejo de rutas.
+
+## 📦 Instalación y Uso
+
+Si deseas correr este proyecto localmente, sigue estos pasos:
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone https://github.com/Mateodumas/Portafolio.git
+    cd Portafolio
+    ```
+
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Iniciar el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Construir para producción:**
+    ```bash
+    npm run build
+    ```
+
+## 🚀 Despliegue
+
+El proyecto está configurado para desplegarse automáticamente en **GitHub Pages**.
+
+Para desplegar una nueva versión manualmente:
+
+```bash
+npm run deploy
+```
+
+Este comando ejecuta el build y sube la carpeta `dist` a la rama `gh-pages`.
+
+## 📬 Contacto
+
+**Mateo Dumas** - Desarrollador Full Stack Junior
+
+- 📧 Email: dumasmateo2005@gmail.com
+- 💼 LinkedIn: [mateo-dumas](https://www.linkedin.com/in/mateo-dumas)
+- 🐙 GitHub: [Mateodumas](https://github.com/Mateodumas)
+
+---
+Hecho con ❤️ y React.
