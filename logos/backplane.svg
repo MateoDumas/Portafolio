@@ -1,6 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="20" fill="#0f172a" />
-  <circle cx="50" cy="50" r="30" stroke="#38bdf8" stroke-width="4" fill="none" stroke-dasharray="10 5" />
-  <circle cx="50" cy="50" r="15" fill="#38bdf8" />
-  <path d="M50 20 L50 10 M50 80 L50 90 M20 50 L10 50 M80 50 L90 50" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="0" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo cuadrado redondeado oscuro -->
+  <rect width="160" height="160" rx="30" fill="#1e293b" />
+  
+  <!-- Círculo central azul -->
+  <circle cx="80" cy="80" r="28" fill="#2563eb" stroke="white" stroke-width="4" />
+  
+  <!-- Anillo concéntrico decorativo -->
+  <circle cx="80" cy="80" r="40" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.6" />
+  
+  <!-- Conexiones -->
+  <line x1="80" y1="52" x2="80" y2="25" stroke="white" stroke-width="4" stroke-linecap="round" />
+  <line x1="106" y1="70" x2="130" y2="55" stroke="white" stroke-width="4" stroke-linecap="round" />
+  <line x1="106" y1="90" x2="130" y2="105" stroke="white" stroke-width="4" stroke-linecap="round" />
+  <line x1="54" y1="90" x2="30" y2="105" stroke="white" stroke-width="4" stroke-linecap="round" />
+  <line x1="54" y1="70" x2="30" y2="55" stroke="white" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- Nodos satélite -->
+  <!-- Arriba (Verde) -->
+  <circle cx="80" cy="25" r="14" fill="#22c55e" />
+  
+  <!-- Derecha Arriba (Verde) -->
+  <circle cx="130" cy="55" r="14" fill="#22c55e" />
+  
+  <!-- Derecha Abajo (Amarillo) -->
+  <circle cx="130" cy="105" r="14" fill="#eab308" />
+  
+  <!-- Izquierda Abajo (Rojo) -->
+  <circle cx="30" cy="105" r="14" fill="#ef4444" />
+  
+  <!-- Izquierda Arriba (Verde) -->
+  <circle cx="30" cy="55" r="14" fill="#22c55e" />
+  
 </svg>
