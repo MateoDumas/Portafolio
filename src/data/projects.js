@@ -196,7 +196,7 @@ export const projects = [
     type: 'frontend',
     repoUrl: 'https://github.com/MateoDumas/PulseBoard-PWA',
     demoUrl: 'https://mateodumas.github.io/PulseBoard-PWA/',
-    videoUrl: null,
+    videoUrl: '/videos/pulseboard.mp4',
     fullDescription: 'Aplicación Web Progresiva (PWA) diseñada para funcionar offline y online. Implementa Service Workers para caché avanzado, notificaciones push y sincronización en segundo plano. La interfaz es mobile-first y utiliza Socket.io para actualizaciones instantáneas.',
     features: [
       'PWA con soporte Offline (Service Workers)',
