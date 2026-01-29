@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import AnimatedSection from './AnimatedSection'
 
 function Contact() {
   const { t } = useTranslation()
@@ -28,7 +29,7 @@ function Contact() {
   }
 
   return (
-    <section id="contacto" className="section" aria-labelledby="contacto-titulo">
+    <AnimatedSection id="contacto" className="section" aria-labelledby="contacto-titulo">
       <div className="container contact-grid">
         <div>
           <p className="section-kicker">{t('contact.kicker')}</p>
@@ -97,7 +98,7 @@ function Contact() {
           )}
         </form>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }
 

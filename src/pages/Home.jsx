@@ -1,6 +1,7 @@
 import Header from '../components/Header.jsx'
 import Hero from '../components/Hero.jsx'
 import Footer from '../components/Footer.jsx'
+import PageTransition from '../components/PageTransition.jsx'
 import { Suspense, lazy, useEffect, useState } from 'react'
 import '../App.css'
 
@@ -49,13 +50,16 @@ function Home() {
   }
 
   return (
-    <div className="app">
+    <PageTransition className="app">
       <a href="#main" className="skip-link">
         Saltar al contenido principal
       </a>
       <Header activeSection={activeSection} onNavigate={handleNavigate} />
       <main id="main" className="main">
-        <Hero onContactClick={() => handleNavigate('contacto')} />
+        <Hero 
+          onContactClick={() => handleNavigate('contacto')} 
+          onProjectsClick={() => handleNavigate('proyectos')}
+        />
         <Suspense
           fallback={
             <div className="section-loading" aria-live="polite">
@@ -71,7 +75,7 @@ function Home() {
         </Suspense>
       </main>
       <Footer />
-    </div>
+    </PageTransition>
   )
 }
 

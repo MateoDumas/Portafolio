@@ -1,5 +1,66 @@
 export const projects = [
   {
+    id: 'billforge',
+    title: 'BillForge',
+    logoUrl: '/logos/billforge.svg',
+    role: 'Backend Engineer',
+    description:
+      'Infraestructura de facturación SaaS headless con gestión de suscripciones y panel de control.',
+    tags: ['Node.js', 'Express', 'PostgreSQL', 'TypeScript', 'Stripe'],
+    type: 'backend',
+    repoUrl: 'https://github.com/MateoDumas/BillForge',
+    demoUrl: 'https://bill-forge-hc2t.vercel.app/',
+    videoUrl: null,
+    fullDescription: 'BillForge es una infraestructura de facturación headless diseñada para desarrolladores que necesitan control total sobre su lógica de suscripción. Actúa como middleware entre tu aplicación y Stripe, manejando el ciclo de vida de suscripciones, reintentos de cobro y facturación multi-tenant. Incluye un panel de administración para métricas y gestión de clientes.',
+    features: [
+      'Gestión de Ciclo de Vida de Suscripciones (State Machines)',
+      'Arquitectura Multi-Tenant con aislamiento de datos',
+      'Sistema de Webhooks y procesamiento en segundo plano',
+      'Generación de facturas PDF y gestión de Dunning',
+      'Dashboard de métricas y control de acceso RBAC'
+    ]
+  },
+  {
+    id: 'backplane',
+    title: 'Backplane',
+    logoUrl: '/logos/backplane.svg',
+    role: 'Backend Architect',
+    description: 'Arquitectura de microservicios con patrones de resiliencia y Chaos Engineering.',
+    tags: ['Docker', 'Node.js', 'API Gateway', 'Microservices', 'PostgreSQL'],
+    type: 'backend',
+    repoUrl: 'https://github.com/MateoDumas/Backplane',
+    demoUrl: 'https://frontend-92qs.onrender.com/',
+    videoUrl: null,
+    fullDescription: 'Demo de arquitectura de microservicios lista para producción que implementa patrones avanzados de resiliencia y Chaos Engineering. El sistema está orquestado con Docker Compose y cuenta con un API Gateway centralizado que maneja Rate Limiting y Circuit Breaker. Diseñado para demostrar cómo construir sistemas distribuidos robustos capaces de soportar fallos inyectados intencionalmente.',
+    features: [
+      'Circuit Breaker y Rate Limiting en API Gateway',
+      'Chaos Engineering (Inyección de latencia y fallos)',
+      'Idempotencia en transacciones de pago',
+      'Orquestación completa con Docker Compose',
+      'Dashboard de observabilidad en tiempo real'
+    ]
+  },
+  {
+    id: 'sensorflux',
+    title: 'SensorFlux',
+    logoUrl: '/logos/sensorflux.svg',
+    role: 'IoT Engineer',
+    description: 'Pipeline de ingesta de datos IoT de alto rendimiento con InfluxDB y visualización.',
+    tags: ['Node.js', 'InfluxDB', 'MQTT', 'Docker', 'Grafana'],
+    type: 'backend',
+    repoUrl: 'https://github.com/MateoDumas/SensorFlux',
+    demoUrl: 'https://sensorflux-grafana.onrender.com',
+    videoUrl: null,
+    fullDescription: 'Sistema de procesamiento de datos IoT diseñado para manejar alta concurrencia de lecturas de sensores. Utiliza el protocolo MQTT para la transmisión ligera de mensajes y almacena series temporales en InfluxDB. Incluye dashboards de Grafana preconfigurados para monitorear temperatura, humedad y métricas de dispositivos en tiempo real.',
+    features: [
+      'Ingesta de datos vía MQTT/WebSockets',
+      'Almacenamiento optimizado en Series Temporales (InfluxDB)',
+      'Visualización de datos en tiempo real con Grafana',
+      'Alertas automatizadas basadas en umbrales',
+      'Contenerización de servicios con Docker'
+    ]
+  },
+  {
     id: 'prontoclick',
     title: 'ProntoClick',
     logoUrl: '/logos/prontoclick.svg',
@@ -9,8 +70,8 @@ export const projects = [
     tags: ['Next.js', 'NestJS', 'Prisma', 'PostgreSQL', 'TypeScript'],
     type: 'fullstack',
     repoUrl: 'https://github.com/MateoDumas/ProntoClick',
-    demoUrl: null, // Asumimos que no hay demo pública activa por ahora
-    videoUrl: '/videos/prontoclick.mp4', // Archivo en public/videos/
+    demoUrl: 'https://pronto-click.vercel.app',
+    videoUrl: '/videos/prontoclick.mp4',
     fullDescription: 'Plataforma Full-Stack de delivery y marketplace construida con una arquitectura moderna y escalable. Este proyecto demuestra mi capacidad para manejar lógica de negocio compleja, autenticación segura y gestión de estado en tiempo real. Integra un backend robusto en NestJS con Prisma ORM y base de datos PostgreSQL. El frontend en Next.js prioriza la velocidad y el SEO. Implementé WebSockets para el chat y geolocalización, solucionando el desafío de la comunicación instantánea entre actores.',
     features: [
       'Chat en tiempo real (WebSockets) - Comunicación fluida',
@@ -103,6 +164,46 @@ export const projects = [
       'Persistencia de usuarios y sesiones en MongoDB',
       'Sección de documentación con descripción de endpoints y ejemplos de uso',
       'Configuración lista para deploy en servicios en la nube'
+    ]
+  },
+  {
+    id: 'obitdata',
+    title: 'ObitData Dashboard',
+    logoUrl: '/logos/obitdata.svg',
+    role: 'Frontend Developer',
+    description: 'Dashboard en tiempo real para visualización de métricas con React + Vite + TypeScript.',
+    tags: ['React', 'TypeScript', 'D3.js', 'WebSocket', 'Zustand'],
+    type: 'frontend',
+    repoUrl: 'https://github.com/MateoDumas/ObitData-Dashboard',
+    demoUrl: 'https://mateodumas.github.io/ObitData-Dashboard/',
+    videoUrl: null,
+    fullDescription: 'Dashboard profesional para monitoreo de datos en tiempo real. Utiliza WebSockets para streaming de datos, D3.js para visualizaciones complejas y Zustand para gestión de estado global. Incluye sistema de alertas configurable, modo oscuro/claro y diseño responsivo.',
+    features: [
+      'Visualización de datos en tiempo real (WebSockets)',
+      'Gráficos interactivos con D3.js',
+      'Sistema de alertas configurable',
+      'Modo Oscuro / Claro',
+      'Exportación de reportes'
+    ]
+  },
+  {
+    id: 'pulseboard',
+    title: 'PulseBoard PWA',
+    logoUrl: '/logos/pulseboard.svg',
+    role: 'Frontend Developer',
+    description: 'Progressive Web App (PWA) moderna con capacidades offline y actualizaciones en tiempo real.',
+    tags: ['React', 'Vite', 'PWA', 'Socket.io', 'Node.js'],
+    type: 'frontend',
+    repoUrl: 'https://github.com/MateoDumas/PulseBoard-PWA',
+    demoUrl: 'https://mateodumas.github.io/PulseBoard-PWA/',
+    videoUrl: null,
+    fullDescription: 'Aplicación Web Progresiva (PWA) diseñada para funcionar offline y online. Implementa Service Workers para caché avanzado, notificaciones push y sincronización en segundo plano. La interfaz es mobile-first y utiliza Socket.io para actualizaciones instantáneas.',
+    features: [
+      'PWA con soporte Offline (Service Workers)',
+      'Instalable en dispositivos móviles',
+      'Actualizaciones en tiempo real con Socket.io',
+      'Estrategias de caché avanzadas',
+      'Arquitectura escalable con React + Vite'
     ]
   }
 ]

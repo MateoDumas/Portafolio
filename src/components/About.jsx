@@ -1,16 +1,30 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import AnimatedSection from './AnimatedSection'
 
 function About() {
   const { t } = useTranslation()
+  const [imageError, setImageError] = useState(false)
 
   return (
-    <section id="sobre-mi" className="section" aria-labelledby="sobre-mi-titulo">
+    <AnimatedSection id="sobre-mi" className="section" aria-labelledby="sobre-mi-titulo">
       <div className="container section-grid">
         <div>
           <p className="section-kicker">{t('about.kicker')}</p>
           <h2 id="sobre-mi-titulo" className="section-title">
             {t('about.title')}
           </h2>
+          
+          {!imageError && (
+            <div className="about-profile-wrapper">
+              <img 
+                src={`${import.meta.env.BASE_URL}logos/Mateo.png`}
+                alt="Mateo Dumas" 
+                className="about-profile-image"
+                onError={() => setImageError(true)}
+              />
+            </div>
+          )}
         </div>
         <div className="section-body">
           <p>
@@ -32,7 +46,7 @@ function About() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }
 

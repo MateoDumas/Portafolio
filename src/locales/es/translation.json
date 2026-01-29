@@ -98,6 +98,7 @@
   "projects_section": {
     "kicker": "Proyectos",
     "title": "Ejemplos de interfaces y aplicaciones escalables.",
+    "view_project": "Ver proyecto",
     "filters": {
       "all": "Todos",
       "frontend": "Frontend",
@@ -115,6 +116,45 @@
     "repo": "Repositorio"
   },
   "projects": {
+    "billforge": {
+      "title": "BillForge",
+      "role": "Backend Engineer",
+      "description": "Infraestructura de facturación SaaS headless con gestión de suscripciones y panel de control.",
+      "fullDescription": "BillForge es una infraestructura de facturación headless diseñada para desarrolladores que necesitan control total sobre su lógica de suscripción. Actúa como middleware entre tu aplicación y Stripe, manejando el ciclo de vida de suscripciones, reintentos de cobro y facturación multi-tenant. Incluye un panel de administración para métricas y gestión de clientes.",
+      "features": [
+        "Gestión de Ciclo de Vida de Suscripciones (State Machines)",
+        "Arquitectura Multi-Tenant con aislamiento de datos",
+        "Sistema de Webhooks y procesamiento en segundo plano",
+        "Generación de facturas PDF y gestión de Dunning",
+        "Dashboard de métricas y control de acceso RBAC"
+      ]
+    },
+    "backplane": {
+      "title": "Backplane",
+      "role": "Backend Architect",
+      "description": "Arquitectura de microservicios con patrones de resiliencia y Chaos Engineering.",
+      "fullDescription": "Demo de arquitectura de microservicios lista para producción que implementa patrones avanzados de resiliencia y Chaos Engineering. El sistema está orquestado con Docker Compose y cuenta con un API Gateway centralizado que maneja Rate Limiting y Circuit Breaker. Diseñado para demostrar cómo construir sistemas distribuidos robustos capaces de soportar fallos inyectados intencionalmente.",
+      "features": [
+        "Circuit Breaker y Rate Limiting en API Gateway",
+        "Chaos Engineering (Inyección de latencia y fallos)",
+        "Idempotencia en transacciones de pago",
+        "Orquestación completa con Docker Compose",
+        "Dashboard de observabilidad en tiempo real"
+      ]
+    },
+    "sensorflux": {
+      "title": "SensorFlux",
+      "role": "IoT Engineer",
+      "description": "Pipeline de ingesta de datos IoT de alto rendimiento con InfluxDB y visualización.",
+      "fullDescription": "Sistema de procesamiento de datos IoT diseñado para manejar alta concurrencia de lecturas de sensores. Utiliza el protocolo MQTT para la transmisión ligera de mensajes y almacena series temporales en InfluxDB. Incluye dashboards de Grafana preconfigurados para monitorear temperatura, humedad y métricas de dispositivos en tiempo real.",
+      "features": [
+        "Ingesta de datos vía MQTT/WebSockets",
+        "Almacenamiento optimizado en Series Temporales (InfluxDB)",
+        "Visualización de datos en tiempo real con Grafana",
+        "Alertas automatizadas basadas en umbrales",
+        "Contenerización de servicios con Docker"
+      ]
+    },
     "prontoclick": {
       "title": "ProntoClick",
       "role": "Full Stack Developer",
@@ -178,6 +218,32 @@
         "Persistencia de usuarios y sesiones en MongoDB",
         "Sección de documentación con descripción de endpoints y ejemplos de uso",
         "Configuración lista para deploy en servicios en la nube"
+      ]
+    },
+    "obitdata": {
+      "title": "ObitData Dashboard",
+      "role": "Frontend Developer",
+      "description": "Dashboard en tiempo real para visualización de métricas con React + Vite + TypeScript.",
+      "fullDescription": "Dashboard profesional para monitoreo de datos en tiempo real. Utiliza WebSockets para streaming de datos, D3.js para visualizaciones complejas y Zustand para gestión de estado global. Incluye sistema de alertas configurable, modo oscuro/claro y diseño responsivo.",
+      "features": [
+        "Visualización de datos en tiempo real (WebSockets)",
+        "Gráficos interactivos con D3.js",
+        "Sistema de alertas configurable",
+        "Modo Oscuro / Claro",
+        "Exportación de reportes"
+      ]
+    },
+    "pulseboard": {
+      "title": "PulseBoard PWA",
+      "role": "Frontend Developer",
+      "description": "Progressive Web App (PWA) moderna con capacidades offline y actualizaciones en tiempo real.",
+      "fullDescription": "Aplicación Web Progresiva (PWA) diseñada para funcionar offline y online. Implementa Service Workers para caché avanzado, notificaciones push y sincronización en segundo plano. La interfaz es mobile-first y utiliza Socket.io para actualizaciones instantáneas.",
+      "features": [
+        "PWA con soporte Offline (Service Workers)",
+        "Instalable en dispositivos móviles",
+        "Actualizaciones en tiempo real con Socket.io",
+        "Estrategias de caché avanzadas",
+        "Arquitectura escalable con React + Vite"
       ]
     }
   },

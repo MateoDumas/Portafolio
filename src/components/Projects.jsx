@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { projects } from '../data/projects'
+import AnimatedSection from './AnimatedSection'
+import { motion } from 'framer-motion'
 
 function Projects() {
   const { t } = useTranslation()
@@ -19,8 +21,17 @@ function Projects() {
       ? projects
       : projects.filter((project) => project.type === activeFilter)
 
+  // Helper function to resolve asset paths for GitHub Pages
+  const getAssetPath = (path) => {
+    if (!path) return null
+    if (path.startsWith('http')) return path
+    // Remove leading slash to avoid double slashes with BASE_URL
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path
+    return `${import.meta.env.BASE_URL}${cleanPath}`
+  }
+
   return (
-    <section id="proyectos" className="section" aria-labelledby="proyectos-titulo">
+    <AnimatedSection id="proyectos" className="section" aria-labelledby="proyectos-titulo">
       <div className="container">
         <div className="section-header">
           <div>
@@ -45,10 +56,19 @@ function Projects() {
           </div>
         </div>
 
-        <div className="projects-grid">
+        <motion.div 
+          className="projects-grid"
+          layout
+        >
           {visibleProjects.map((project) => {
             return (
-              <article
+              <motion.article
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+                whileHover={{ y: -10, transition: { duration: 0.2 } }}
                 key={project.id}
                 className="card project-card"
               >
@@ -56,7 +76,7 @@ function Projects() {
                   <div className={`project-logo-container logo-${project.type}`}>
                     {project.logoUrl ? (
                       <img 
-                        src={project.logoUrl} 
+                        src={getAssetPath(project.logoUrl)} 
                         alt={`Logo de ${project.title}`} 
                         className="project-logo-image"
                         onError={(e) => {
@@ -89,21 +109,33 @@ function Projects() {
                   {project.tags.length > 4 && <li className="pill">+{project.tags.length - 4}</li>}
                 </ul>
                 
-                <div style={{ marginTop: '1.5rem' }}>
-                  <Link 
-                    to={`/project/${project.id}`} 
-                    className="button ghost small project-link-button"
-                    aria-label={`Ver detalles de ${project.title}`}
+                <Link
+                  to={`/project/${project.id}`}
+                  className="link-arrow project-link-button"
+                  aria-label={`Ver detalles de ${project.title}`}
+                >
+                  {t('projects_section.view_project')}
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
                   >
-                    {t('projects_section.view_detail')}
-                  </Link>
-                </div>
-              </article>
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                  </svg>
+                </Link>
+              </motion.article>
             )
           })}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }
 

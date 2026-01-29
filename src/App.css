@@ -1,5 +1,6 @@
 .app {
   min-height: 100vh;
+  min-height: 100dvh; /* Support for dynamic viewport height on mobile */
   background: 
     radial-gradient(circle at 15% 50%, var(--color-surface-soft), transparent 25%),
     radial-gradient(circle at 85% 30%, var(--color-border-subtle), transparent 25%),
@@ -7,6 +8,12 @@
   background-attachment: fixed;
   color: var(--color-text);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .app {
+    background-attachment: scroll; /* Fix for iOS scroll jitter */
+  }
 }
 
 .text-gradient {
@@ -20,19 +27,41 @@
   padding-block: 6rem 4rem;
 }
 
+.project-detail {
+  padding-block: 6rem 4rem;
+}
+
+@media (max-width: 767px) {
+  .main, .project-detail {
+    padding-block: 4rem 3rem;
+  }
+}
+
 .container {
   width: min(1120px, 100% - 2.5rem);
   margin-inline: auto;
 }
 
 .section {
-  padding-block: 4rem;
-  scroll-margin-top: 5rem;
+  padding-block: 3rem;
+  scroll-margin-top: 7rem; /* Increased for taller header on mobile */
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: 4rem;
+  }
 }
 
 .hero {
-  padding-block: 6rem 5rem;
-  scroll-margin-top: 5rem;
+  padding-block: 4rem 3rem;
+  scroll-margin-top: 7rem; /* Increased for taller header on mobile */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-block: 6rem 5rem;
+  }
 }
 
 .section + .section {
@@ -82,6 +111,7 @@
   background: var(--color-surface-soft);
   border-bottom: 1px solid var(--color-border-subtle);
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  padding-top: env(safe-area-inset-top, 0px); /* Notch support */
 }
 
 .header-content {
@@ -90,6 +120,8 @@
   justify-content: space-between;
   padding-block: 1rem;
   gap: 1.5rem;
+  width: min(1120px, 100% - 2.5rem); /* Match container width */
+  margin-inline: auto;
 }
 
 .brand {
@@ -221,11 +253,12 @@
 
 .hero-grid {
   display: grid;
-  gap: 4rem;
+  gap: 2.5rem;
 }
 
 @media (min-width: 768px) {
   .hero-grid {
+    gap: 4rem;
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
     align-items: center;
   }
@@ -511,7 +544,13 @@
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -670,18 +709,30 @@
   gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 550px) {
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
   .process-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
 .process-step {
-  min-height: 10rem;
   position: relative;
 }
 
-.process-description {
+.process-step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 0.75rem;
+}
+
+.process-step p {
   margin: 0;
   color: var(--color-text-muted);
   font-size: 0.95rem;
@@ -690,6 +741,7 @@
 
 .footer {
   padding-block: 3rem;
+  padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px)); /* Home bar support */
   border-top: 1px solid var(--color-border-subtle);
   background: var(--color-surface-soft);
 }
@@ -800,6 +852,41 @@
   background: var(--color-surface-soft);
 }
 
+/* About Profile Image */
+.about-profile-wrapper {
+  margin-top: 2rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 40px -10px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  border: 1px solid var(--color-border-subtle);
+  max-width: 280px;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+  background-color: var(--color-surface-soft);
+}
+
+@media (max-width: 767px) {
+  .about-profile-wrapper {
+    margin-inline: auto;
+    margin-bottom: 1rem;
+    transform: rotate(0deg);
+  }
+}
+
+.about-profile-wrapper:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.about-profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3/4; /* Ensures consistent vertical shape */
+}
+
 /* Project Detail Page Improvements */
 
 .project-header-grid {
@@ -844,6 +931,21 @@
 .meta-label {
   font-weight: 500;
   letter-spacing: 0.02em;
+}
+
+.project-meta-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  font-family: monospace;
+}
+
+@media (min-width: 768px) {
+  .project-meta-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .project-title-large {
@@ -927,4 +1029,19 @@
 
 .project-features li::marker {
   color: var(--color-primary);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: auto;
+  transition: gap 0.2s ease;
+}
+
+.link-arrow:hover {
+  gap: 0.75rem;
 }

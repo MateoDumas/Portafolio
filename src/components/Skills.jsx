@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import AnimatedSection from './AnimatedSection'
 
 function Skills() {
   const { t } = useTranslation()
@@ -29,7 +30,7 @@ function Skills() {
   ]
 
   return (
-    <section id="habilidades" className="section" aria-labelledby="habilidades-titulo">
+    <AnimatedSection id="habilidades" className="section" aria-labelledby="habilidades-titulo">
       <div className="container">
         <p className="section-kicker">{t('skills.kicker')}</p>
         <h2 id="habilidades-titulo" className="section-title">
@@ -50,7 +51,7 @@ function Skills() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }
 

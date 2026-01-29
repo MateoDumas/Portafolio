@@ -12,10 +12,15 @@ function Header({ activeSection, onNavigate }) {
     setMenuOpen(false)
   }
 
+  const handleLogoClick = (e) => {
+    e.preventDefault()
+    handleNavigate('inicio')
+  }
+
   return (
     <header className="header">
       <div className="container header-content">
-        <a href="#inicio" className="brand" onClick={() => handleNavigate('inicio')}>
+        <a href="#inicio" className="brand" onClick={handleLogoClick}>
           <span className="brand-mark">M</span>
           <span className="brand-text">Mateo Dumas</span>
         </a>

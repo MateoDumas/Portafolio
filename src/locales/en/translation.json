@@ -98,6 +98,7 @@
   "projects_section": {
     "kicker": "Projects",
     "title": "Examples of scalable interfaces and applications.",
+    "view_project": "View project",
     "filters": {
       "all": "All",
       "frontend": "Frontend",
@@ -115,6 +116,45 @@
     "repo": "Repository"
   },
   "projects": {
+    "billforge": {
+      "title": "BillForge",
+      "role": "Backend Engineer",
+      "description": "Headless SaaS billing infrastructure with subscription management and dashboard.",
+      "fullDescription": "BillForge is a headless billing infrastructure designed for developers who need full control over their subscription logic. It acts as middleware between your app and Stripe, handling subscription lifecycle, dunning management, and multi-tenant billing. Includes an admin dashboard for metrics and customer management.",
+      "features": [
+        "Subscription Lifecycle Management (State Machines)",
+        "Multi-Tenant Architecture with data isolation",
+        "Webhook System and background processing",
+        "PDF Invoice Generation and Dunning management",
+        "Metrics Dashboard and RBAC access control"
+      ]
+    },
+    "backplane": {
+      "title": "Backplane",
+      "role": "Backend Architect",
+      "description": "Microservices architecture with resilience patterns and Chaos Engineering.",
+      "fullDescription": "Production-ready microservices architecture demo showcasing advanced resilience patterns and Chaos Engineering. The system is orchestrated via Docker Compose and features a centralized API Gateway handling Rate Limiting and Circuit Breaker. Designed to demonstrate how to build robust distributed systems capable of withstanding intentionally injected failures.",
+      "features": [
+        "Circuit Breaker & Rate Limiting in API Gateway",
+        "Chaos Engineering (Latency & Failure Injection)",
+        "Idempotency in payment transactions",
+        "Full orchestration with Docker Compose",
+        "Real-time observability dashboard"
+      ]
+    },
+    "sensorflux": {
+      "title": "SensorFlux",
+      "role": "IoT Engineer",
+      "description": "High-performance IoT data ingestion pipeline with InfluxDB and visualization.",
+      "fullDescription": "IoT data processing system designed to handle high concurrency of sensor readings. Uses the MQTT protocol for lightweight message transmission and stores time series in InfluxDB. Includes pre-configured Grafana dashboards to monitor temperature, humidity, and device metrics in real-time.",
+      "features": [
+        "Data Ingestion via MQTT/WebSockets",
+        "Optimized Time-Series Storage (InfluxDB)",
+        "Real-time Data Visualization with Grafana",
+        "Automated Threshold-based Alerts",
+        "Service Containerization with Docker"
+      ]
+    },
     "prontoclick": {
       "title": "ProntoClick",
       "role": "Full Stack Developer",
@@ -178,6 +218,32 @@
         "User and session persistence in MongoDB",
         "Documentation section with endpoint descriptions and usage examples",
         "Configuration ready for cloud deployment"
+      ]
+    },
+    "obitdata": {
+      "title": "ObitData Dashboard",
+      "role": "Frontend Developer",
+      "description": "Real-time dashboard for metric visualization with React + Vite + TypeScript.",
+      "fullDescription": "Professional dashboard for real-time data monitoring. Uses WebSockets for data streaming, D3.js for complex visualizations, and Zustand for global state management. Includes configurable alert system, dark/light mode, and responsive design.",
+      "features": [
+        "Real-time data visualization (WebSockets)",
+        "Interactive charts with D3.js",
+        "Configurable alert system",
+        "Dark / Light Mode",
+        "Report export"
+      ]
+    },
+    "pulseboard": {
+      "title": "PulseBoard PWA",
+      "role": "Frontend Developer",
+      "description": "Modern Progressive Web App (PWA) with offline capabilities and real-time updates.",
+      "fullDescription": "Progressive Web App (PWA) designed to work offline and online. Implements Service Workers for advanced caching, push notifications, and background synchronization. The interface is mobile-first and uses Socket.io for instant updates.",
+      "features": [
+        "PWA with Offline support (Service Workers)",
+        "Installable on mobile devices",
+        "Real-time updates with Socket.io",
+        "Advanced caching strategies",
+        "Scalable architecture with React + Vite"
       ]
     }
   },

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import AnimatedSection from './AnimatedSection'
 
 function Process() {
   const { t } = useTranslation()
@@ -23,7 +24,7 @@ function Process() {
   ]
 
   return (
-    <section id="proceso" className="section" aria-labelledby="proceso-titulo">
+    <AnimatedSection id="proceso" className="section" aria-labelledby="proceso-titulo">
       <div className="container">
         <p className="section-kicker">{t('process.kicker')}</p>
         <h2 id="proceso-titulo" className="section-title">
@@ -38,7 +39,7 @@ function Process() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }
 

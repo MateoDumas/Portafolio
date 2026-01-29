@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { projects } from '../data/projects'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import PageTransition from '../components/PageTransition'
+import { motion } from 'framer-motion'
 
 function ProjectDetail() {
   const { t } = useTranslation()
@@ -18,13 +20,13 @@ function ProjectDetail() {
   if (!project) {
     console.error('Project not found for id:', id)
     return (
-      <div className="container" style={{ padding: '4rem 0', textAlign: 'center' }}>
+      <PageTransition className="container" style={{ padding: '4rem 0', textAlign: 'center' }}>
         <h2>{t('project_detail.not_found')}</h2>
         <p>{t('project_detail.not_found_desc', { id })}</p>
         <Link to="/" className="button primary" style={{ marginTop: '1rem' }}>
           {t('project_detail.back_home')}
         </Link>
-      </div>
+      </PageTransition>
     )
   }
 
@@ -33,6 +35,14 @@ function ProjectDetail() {
     if (url.includes('youtube.com') || url.includes('youtu.be')) {
       const videoId = url.split('v=')[1] || url.split('/').pop()
       return `https://www.youtube.com/embed/${videoId}`
+    }
+    // Handle local video paths for GitHub Pages
+    if (url.startsWith('/')) {
+      // Ensure we use the correct base path
+      const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+        ? import.meta.env.BASE_URL.slice(0, -1) 
+        : import.meta.env.BASE_URL
+      return `${baseUrl}${url}`
     }
     return url
   }
@@ -47,31 +57,57 @@ function ProjectDetail() {
   const projectRole = t(`projects.${project.id}.role`)
   const projectFeatures = t(`projects.${project.id}.features`, { returnObjects: true }) || []
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: 'easeOut' }
+    }
+  }
+
   return (
-    <>
+    <PageTransition>
       <Header activeSection="projects" onNavigate={() => navigate('/')} />
       
-      <main className="project-detail" style={{ paddingTop: '80px', paddingBottom: '4rem' }}>
-        <div className="container">
-          <Link to="/" className="back-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', color: 'var(--color-text-soft)', textDecoration: 'none' }}>
-            {t('project_detail.back')}
-          </Link>
+      <main className="project-detail">
+        <motion.div 
+          className="container"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div variants={itemVariants}>
+            <Link to="/" className="back-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem', color: 'var(--color-text-soft)', textDecoration: 'none' }}>
+              {t('project_detail.back')}
+            </Link>
+          </motion.div>
 
           <article className="project-content">
-            <header className="project-header" style={{ marginBottom: '3rem' }}>
-              <h1 className="project-title-large" style={{ marginBottom: '1.5rem' }}>
+            <header style={{ marginBottom: '3rem' }}>
+              <motion.h1 variants={itemVariants} className="project-title-large" style={{ marginBottom: '1.5rem' }}>
                 {projectTitle}
-              </h1>
+              </motion.h1>
 
               <div className="project-header-grid">
-                <div style={{ flex: '1', minWidth: 0 }}>
+                <motion.div variants={itemVariants} style={{ flex: '1', minWidth: 0 }}>
                   <p className="project-description-lead" style={{ marginTop: 0 }}>
                     {projectDescription}
                   </p>
 
-                  <div className="project-actions" style={{ marginTop: '1rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <div className="project-actions">
                     {project.demoUrl && (
-                      <a href={project.demoUrl} target="_blank" rel="noreferrer" className="button primary small" style={{ paddingInline: '0.8rem' }}>
+                      <a href={project.demoUrl} target="_blank" rel="noreferrer" className="button primary small">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                           <polyline points="15 3 21 3 21 9"></polyline>
@@ -82,7 +118,7 @@ function ProjectDetail() {
                     )}
                     
                     {project.repoUrl && (
-                      <a href={project.repoUrl} target="_blank" rel="noreferrer" className="button ghost small" style={{ paddingInline: '0.8rem' }}>
+                      <a href={project.repoUrl} target="_blank" rel="noreferrer" className="button ghost small">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
@@ -90,9 +126,9 @@ function ProjectDetail() {
                       </a>
                     )}
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="project-meta-row" style={{ margin: 0, flexDirection: 'column', alignItems: 'flex-start', gap: '1rem', width: '100%' }}>
+                <motion.div variants={itemVariants} className="project-meta-container">
                   <div className="project-meta-item">
                     <span className="meta-icon">👤</span>
                     <span className="meta-label">{projectRole}</span>
@@ -103,12 +139,12 @@ function ProjectDetail() {
                       {project.type.charAt(0).toUpperCase() + project.type.slice(1)}
                     </span>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </header>
 
             {project.videoUrl && (
-              <div id="project-video" className="project-video-container" style={{ marginBottom: '4rem', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+              <motion.div variants={itemVariants} id="project-video" className="project-video-container" style={{ marginBottom: '4rem', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
                 {isYouTube ? (
                   <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
                     <iframe
@@ -120,16 +156,23 @@ function ProjectDetail() {
                     />
                   </div>
                 ) : (
-                  <video controls style={{ width: '100%', display: 'block' }}>
-                    <source src={project.videoUrl} type="video/mp4" />
-                    Tu navegador no soporta el elemento de video.
+                  <video 
+                    controls 
+                    playsInline 
+                    preload="auto" 
+                    style={{ width: '100%', display: 'block', backgroundColor: '#000', minHeight: '300px' }}
+                  >
+                    <source src={videoSrc} type="video/mp4" />
+                    <p style={{ padding: '2rem', textAlign: 'center', color: 'white' }}>
+                      Si no puedes ver el video, puedes <a href={videoSrc} target="_blank" rel="noreferrer" style={{ color: '#4ade80', textDecoration: 'underline' }}>descargarlo aquí</a>.
+                    </p>
                   </video>
                 )}
-              </div>
+              </motion.div>
             )}
 
             <div className="project-body">
-              <div className="project-info">
+              <motion.div variants={itemVariants} className="project-info">
                 <h2>Sobre el proyecto</h2>
                 <p>
                   {projectFullDescription || projectDescription}
@@ -145,9 +188,9 @@ function ProjectDetail() {
                     </ul>
                   </div>
                 )}
-              </div>
+              </motion.div>
 
-              <div className="project-sidebar">
+              <motion.div variants={itemVariants} className="project-sidebar">
                 <div className="card tech-stack-card">
                   <h3 className="card-title">Tecnologías</h3>
                   <div className="tags-container" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -158,14 +201,14 @@ function ProjectDetail() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </article>
-        </div>
+        </motion.div>
       </main>
 
       <Footer />
-    </>
+    </PageTransition>
   )
 }
 
