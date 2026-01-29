@@ -176,7 +176,7 @@ export const projects = [
     type: 'frontend',
     repoUrl: 'https://github.com/MateoDumas/ObitData-Dashboard',
     demoUrl: 'https://mateodumas.github.io/ObitData-Dashboard/',
-    videoUrl: null,
+    videoUrl: '/videos/obitdata.mp4',
     fullDescription: 'Dashboard profesional para monitoreo de datos en tiempo real. Utiliza WebSockets para streaming de datos, D3.js para visualizaciones complejas y Zustand para gestión de estado global. Incluye sistema de alertas configurable, modo oscuro/claro y diseño responsivo.',
     features: [
       'Visualización de datos en tiempo real (WebSockets)',
