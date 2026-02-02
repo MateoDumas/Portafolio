@@ -23,22 +23,30 @@
   "about": {
     "kicker": "Sobre mí",
     "title": "Estudiante de ingeniería enfocado en desarrollo web moderno y escalable.",
-    "body1": "Soy un desarrollador Full Stack Junior en formación constante, cursando la carrera de Ingeniería en Sistemas. Combino una sólida base teórica con práctica intensiva en tecnologías modernas como el stack MERN (MongoDB, Express, React, Node.js) y Next.js.",
-    "body2": "Me destaco por mi proactividad y capacidad para resolver problemas técnicos. He desarrollado proyectos complejos como marketplaces y aplicaciones en tiempo real, demostrando que puedo aportar valor desde el primer día. Busco mi primera experiencia profesional formal para crecer junto a un equipo experimentado.",
+    "body1": "Estudiante de Ingeniería en Sistemas y Desarrollador Full Stack con un enfoque en arquitectura de software y sistemas escalables. A través de proyectos prácticos de alta complejidad, he adquirido experiencia avanzada en el diseño de microservicios resilientes, infraestructuras SaaS y aplicaciones en tiempo real.",
+    "body2": "Combino mi formación académica en lógica y diseño de sistemas con un dominio técnico moderno (MERN, Next.js, Docker, TypeScript). Me diferencio por mi capacidad para abordar desafíos de ingeniería real, como la optimización de rendimiento, la gestión de estado offline-first (PWA) y la visualización de datos, buscando siempre escribir código limpio, mantenible y eficiente.",
     "education": {
       "title": "Educación",
       "items": [
         {
           "title": "Ingeniería en Sistemas de Información",
-          "desc": "En curso (1er Nivel)"
+          "desc": "UTN | En curso (1er Nivel)"
         },
         {
-          "title": "Estudiante de Desarrollo Web",
+          "title": "Desarrollador Web Full Stack",
           "desc": "Universidad Tecnológica Nacional | 2024"
         },
         {
-          "title": "Programación Introductoria con Python",
+          "title": "Programación con Python",
           "desc": "TalentoTech | 2024"
+        },
+        {
+          "title": "Formación Avanzada en Inglés",
+          "desc": "PAEV | 2023"
+        },
+        {
+          "title": "Bachiller en Economía y Administración",
+          "desc": "Centro Educativo Santa Clara de Asís | 2018-2023"
         }
       ]
     }
@@ -50,14 +58,18 @@
       "frontend": "Frontend Moderno",
       "backend": "Backend & APIs",
       "tools": "Herramientas & DevOps",
-      "soft": "Habilidades Blandas"
+      "soft": "Habilidades Blandas",
+      "languages": "Idiomas"
     },
     "items": {
       "teamwork": "Trabajo en Equipo",
       "communication": "Comunicación Efectiva",
       "learning": "Aprendizaje Ágil",
       "problem_solving": "Resolución de Problemas",
-      "english": "Inglés Técnico"
+      "time_management": "Gestión del Tiempo",
+      "self_management": "Autogestión",
+      "spanish_native": "Español (Nativo)",
+      "english_b2": "Inglés (B2)"
     }
   },
   "process": {

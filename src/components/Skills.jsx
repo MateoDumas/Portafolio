@@ -7,24 +7,31 @@ function Skills() {
   const skills = [
     {
       category: t('skills.categories.frontend'),
-      items: ['React', 'Next.js', 'TypeScript', 'Tailwind/Bootstrap', 'GSAP'],
+      items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'GSAP', 'Tailwind'],
     },
     {
       category: t('skills.categories.backend'),
-      items: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL'],
+      items: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL', 'MySQL'],
     },
     {
       category: t('skills.categories.tools'),
-      items: ['Git/GitHub', 'VS Code', 'Postman', 'Vercel', 'Terminal'],
+      items: ['Git/GitHub', 'Docker', 'VS Code', 'Postman', 'Vercel', 'Terminal'],
     },
     {
       category: t('skills.categories.soft'),
       items: [
-        t('skills.items.teamwork'),
         t('skills.items.communication'),
-        t('skills.items.learning'),
+        t('skills.items.teamwork'),
         t('skills.items.problem_solving'),
-        t('skills.items.english'),
+        t('skills.items.time_management'),
+        t('skills.items.self_management'),
+      ],
+    },
+    {
+      category: t('skills.categories.languages'),
+      items: [
+        t('skills.items.spanish_native'),
+        t('skills.items.english_b2'),
       ],
     },
   ]

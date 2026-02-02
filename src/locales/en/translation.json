@@ -23,22 +23,30 @@
   "about": {
     "kicker": "About Me",
     "title": "Engineering student focused on modern and scalable web development.",
-    "body1": "I am a Junior Full Stack Developer in constant training, studying Systems Engineering. I combine a solid theoretical base with intensive practice in modern technologies such as the MERN stack (MongoDB, Express, React, Node.js) and Next.js.",
-    "body2": "I stand out for my proactivity and ability to solve technical problems. I have developed complex projects such as marketplaces and real-time applications, demonstrating that I can contribute value from day one. I am looking for my first formal professional experience to grow alongside an experienced team.",
+    "body1": "Systems Engineering Student and Full Stack Developer focused on software architecture and scalable systems. Through complex practical projects, I have gained advanced experience in designing resilient microservices, SaaS infrastructures, and real-time applications.",
+    "body2": "I combine my academic background in logic and systems design with modern technical mastery (MERN, Next.js, Docker, TypeScript). I stand out for my ability to tackle real engineering challenges, such as performance optimization, offline-first state management (PWA), and data visualization, always striving to write clean, maintainable, and efficient code.",
     "education": {
       "title": "Education",
       "items": [
         {
           "title": "Information Systems Engineering",
-          "desc": "In progress (1st Level)"
+          "desc": "UTN | In progress (1st Level)"
         },
         {
-          "title": "Web Development Student",
+          "title": "Full Stack Web Developer",
           "desc": "National Technological University | 2024"
         },
         {
-          "title": "Introductory Programming with Python",
+          "title": "Python Programming",
           "desc": "TalentoTech | 2024"
+        },
+        {
+          "title": "Advanced English Training",
+          "desc": "PAEV | 2023"
+        },
+        {
+          "title": "High School Diploma",
+          "desc": "Santa Clara de Asís Educational Center | 2018-2023"
         }
       ]
     }
@@ -50,14 +58,18 @@
       "frontend": "Modern Frontend",
       "backend": "Backend & APIs",
       "tools": "Tools & DevOps",
-      "soft": "Soft Skills"
+      "soft": "Soft Skills",
+      "languages": "Languages"
     },
     "items": {
       "teamwork": "Teamwork",
       "communication": "Effective Communication",
       "learning": "Agile Learning",
       "problem_solving": "Problem Solving",
-      "english": "Technical English"
+      "time_management": "Time Management",
+      "self_management": "Self-management",
+      "spanish_native": "Spanish (Native)",
+      "english_b2": "English (B2)"
     }
   },
   "process": {
