@@ -128,6 +128,19 @@
     "repo": "Repository"
   },
   "projects": {
+    "stayflow": {
+      "title": "StayFlow",
+      "role": "Full Stack Developer",
+      "description": "Modern travel booking platform with AI voice search and Spotify-based recommendations.",
+      "fullDescription": "StayFlow revolutionizes the travel booking experience by combining Artificial Intelligence and social features. It allows users to search for accommodations using natural voice commands, find places that match their Spotify music 'vibe', and split travel expenses with friends. All built on a robust and scalable architecture.",
+      "features": [
+        "AI Voice Search (Natural Language Processing)",
+        "Spotify Vibe Match (Music-based recommendations)",
+        "Split Pay (Group expense splitting system)",
+        "Efficient GraphQL API with NestJS and Apollo",
+        "Gamification with loyalty system (FlowPoints)"
+      ]
+    },
     "boardwave": {
       "title": "BoardWave",
       "role": "Full Stack Developer",

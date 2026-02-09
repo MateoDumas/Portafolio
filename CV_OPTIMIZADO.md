@@ -20,6 +20,12 @@ Combino mi formación académica en lógica y diseño de sistemas con un dominio
 ## EXPERIENCIA / PROYECTOS DESTACADOS
 *(Esta sección es la más importante. Reemplaza los proyectos anteriores por estos proyectos destacados)*
 
+**StayFlow | Plataforma de Reservas con IA y Spotify Vibe Match**
+*Repositorio: github.com/MateoDumas2/StayFlow*
+*   Desarrollé una plataforma de reservas innovadora que integra **Inteligencia Artificial** para búsquedas por voz y la API de **Spotify** para recomendar alojamientos basados en gustos musicales.
+*   Diseñé una arquitectura Full Stack robusta con **GraphQL** para optimizar la carga de datos y un sistema de pagos divididos (Split Pay) para viajes grupales.
+*   **Tecnologías:** Next.js, NestJS, GraphQL, TypeScript, Prisma, PostgreSQL, AI (NLP).
+
 **BoardWave | Plataforma de Colaboración Remota con Video SFU y Pizarra**
 *Repositorio: github.com/MateoDumas/BoardWave*
 *   Diseñé y desarrollé una plataforma de videoconferencia escalable utilizando arquitectura SFU (Selective Forwarding Unit) con Mediasoup para transmisión de audio/video de baja latencia.

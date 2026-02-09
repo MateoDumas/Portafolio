@@ -1,5 +1,25 @@
 export const projects = [
   {
+    id: 'stayflow',
+    title: 'StayFlow',
+    logoUrl: '/logos/stayflow.svg',
+    role: 'Full Stack Developer',
+    description: 'Plataforma de reservas con búsqueda por voz IA y recomendaciones basadas en Spotify.',
+    tags: ['Next.js', 'NestJS', 'GraphQL', 'TypeScript', 'Prisma'],
+    type: 'fullstack',
+    repoUrl: 'https://github.com/MateoDumas2/StayFlow',
+    demoUrl: 'https://stay-flow-frontend.vercel.app/',
+    videoUrl: null,
+    fullDescription: 'StayFlow revoluciona la experiencia de reservas de viajes combinando Inteligencia Artificial y características sociales. Permite a los usuarios buscar alojamientos mediante comandos de voz naturales, encontrar lugares que coincidan con su "vibe" musical de Spotify y dividir gastos de viaje con amigos. Todo construido sobre una arquitectura robusta y escalable.',
+    features: [
+      'Búsqueda por Voz con IA (Procesamiento de Lenguaje Natural)',
+      'Spotify Vibe Match (Recomendaciones basadas en música)',
+      'Split Pay (Sistema de división de gastos grupales)',
+      'API GraphQL eficiente con NestJS y Apollo',
+      'Gamificación con sistema de lealtad (FlowPoints)'
+    ]
+  },
+  {
     id: 'boardwave',
     title: 'BoardWave',
     logoUrl: '/logos/boardwave.svg',
