@@ -20,11 +20,12 @@ Combino mi formación académica en lógica y diseño de sistemas con un dominio
 ## EXPERIENCIA / PROYECTOS DESTACADOS
 *(Esta sección es la más importante. Reemplaza los proyectos anteriores por estos proyectos destacados)*
 
-**BoardWave | Plataforma de Gestión de Proyectos Colaborativa**
+**BoardWave | Plataforma de Colaboración Remota con Video SFU y Pizarra**
 *Repositorio: github.com/MateoDumas/BoardWave*
-*   Desarrollé una aplicación Full Stack tipo Kanban que permite la colaboración en tiempo real, inspirada en herramientas líderes del mercado.
-*   Implementé funcionalidades interactivas de Drag-and-Drop y sincronización instantánea de estados entre múltiples usuarios.
-*   **Tecnologías:** Next.js, React, Tailwind CSS, Prisma, PostgreSQL.
+*   Diseñé y desarrollé una plataforma de videoconferencia escalable utilizando arquitectura SFU (Selective Forwarding Unit) con Mediasoup para transmisión de audio/video de baja latencia.
+*   Implementé una pizarra colaborativa sincronizada en tiempo real mediante WebSockets y Yjs, permitiendo a múltiples usuarios dibujar simultáneamente.
+*   Desplegué la infraestructura completa en AWS EC2 utilizando Docker y Caddy como proxy reverso para gestión automática de certificados SSL.
+*   **Tecnologías:** React, Mediasoup (WebRTC), Node.js, Socket.IO, Docker, AWS, Yjs.
 
 **BillForge | Infraestructura de Facturación SaaS**
 *Repositorio: github.com/MateoDumas/BillForge*

@@ -131,14 +131,14 @@
     "boardwave": {
       "title": "BoardWave",
       "role": "Full Stack Developer",
-      "description": "Plataforma colaborativa de gestión de proyectos con funcionalidades en tiempo real.",
-      "fullDescription": "BoardWave es una solución integral para la gestión de tareas y proyectos, inspirada en herramientas como Trello. Permite a los equipos colaborar en tiempo real, organizar flujos de trabajo en tableros visuales y gestionar el progreso de manera eficiente. Construida con un stack moderno centrado en el rendimiento y la experiencia de usuario.",
+      "description": "Plataforma de colaboración remota con videoconferencia SFU y pizarra en tiempo real.",
+      "fullDescription": "BoardWave es una aplicación web full-stack diseñada para facilitar la colaboración remota. Permite a múltiples usuarios conectarse en salas de reuniones virtuales con transmisión de audio y video de baja latencia utilizando una arquitectura SFU (Selective Forwarding Unit). Además de la comunicación AV, integra una pizarra colaborativa sincronizada en tiempo real, chat con transferencia de archivos y capacidad de compartir pantalla, todo envuelto en una interfaz moderna y responsiva.",
       "features": [
-        "Tableros Kanban interactivos con Drag-and-Drop",
-        "Colaboración y actualizaciones en tiempo real",
-        "Gestión de Espacios de Trabajo y Miembros",
-        "Autenticación segura y gestión de roles",
-        "Interfaz moderna y responsiva"
+        "Videoconferencia Escalable (SFU con Mediasoup)",
+        "Pizarra Colaborativa en Tiempo Real (Yjs + Canvas)",
+        "Chat Integrado y Transferencia de Archivos",
+        "Gestión de Salas y Autenticación Segura",
+        "Infraestructura Dockerizada en AWS con Caddy"
       ]
     },
     "billforge": {
