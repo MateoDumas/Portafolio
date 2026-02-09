@@ -128,6 +128,19 @@
     "repo": "Repository"
   },
   "projects": {
+    "boardwave": {
+      "title": "BoardWave",
+      "role": "Full Stack Developer",
+      "description": "Collaborative project management platform with real-time features.",
+      "fullDescription": "BoardWave is a comprehensive solution for task and project management, inspired by tools like Trello. It allows teams to collaborate in real-time, organize workflows on visual boards, and manage progress efficiently. Built with a modern stack focused on performance and user experience.",
+      "features": [
+        "Interactive Kanban Boards with Drag-and-Drop",
+        "Real-time Collaboration and Updates",
+        "Workspace and Member Management",
+        "Secure Authentication and Role Management",
+        "Modern and Responsive Interface"
+      ]
+    },
     "billforge": {
       "title": "BillForge",
       "role": "Backend Engineer",

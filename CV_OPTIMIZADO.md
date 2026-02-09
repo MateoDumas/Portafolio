@@ -1,0 +1,80 @@
+# Propuesta de Contenido para CV Optimizado (Versión Ingeniería)
+
+Este documento contiene el texto sugerido para actualizar tu CV. El cambio principal es **reemplazar los proyectos básicos (Weather App, Tienda) por tus proyectos de ingeniería (BillForge, Backplane, ProntoClick)**, ya que estos demuestran tu verdadero nivel como estudiante avanzado.
+
+---
+
+## ENCABEZADO
+**Mateo Dumas**
+Desarrollador Full Stack | Estudiante de Ingeniería en Sistemas
+[Tu LinkedIn] | [Tu GitHub] | [Tu Portfolio] | [Tu Email] | Buenos Aires, Argentina
+
+---
+
+## PERFIL PROFESIONAL
+Estudiante de Ingeniería en Sistemas y Desarrollador Full Stack con enfoque en arquitectura de software y sistemas escalables. A través de proyectos prácticos de alta complejidad, he adquirido experiencia avanzada en el diseño de microservicios resilientes, infraestructuras SaaS y aplicaciones en tiempo real.
+Combino mi formación académica en lógica y diseño de sistemas con un dominio técnico moderno (MERN, Next.js, Docker, TypeScript). Busco aportar soluciones de código limpio, mantenible y eficiente en equipos de desarrollo ágiles.
+
+---
+
+## EXPERIENCIA / PROYECTOS DESTACADOS
+*(Esta sección es la más importante. Reemplaza los proyectos anteriores por estos proyectos destacados)*
+
+**BoardWave | Plataforma de Gestión de Proyectos Colaborativa**
+*Repositorio: github.com/MateoDumas/BoardWave*
+*   Desarrollé una aplicación Full Stack tipo Kanban que permite la colaboración en tiempo real, inspirada en herramientas líderes del mercado.
+*   Implementé funcionalidades interactivas de Drag-and-Drop y sincronización instantánea de estados entre múltiples usuarios.
+*   **Tecnologías:** Next.js, React, Tailwind CSS, Prisma, PostgreSQL.
+
+**BillForge | Infraestructura de Facturación SaaS**
+*Repositorio: github.com/MateoDumas/BillForge*
+*   Desarrollé un motor de facturación "headless" que actúa como middleware entre aplicaciones cliente y Stripe, gestionando ciclos de vida de suscripciones complejos mediante máquinas de estado.
+*   Implementé una arquitectura Multi-Tenant segura para aislar datos de clientes y un sistema de webhooks para procesamiento asíncrono.
+*   **Tecnologías:** Node.js, Express, TypeScript, PostgreSQL, Stripe API.
+
+**Backplane | Arquitectura de Microservicios Resiliente**
+*Repositorio: github.com/MateoDumas/Backplane*
+*   Diseñé una arquitectura distribuida lista para producción, orquestada con Docker Compose, demostrando patrones de ingeniería de confiabilidad (SRE).
+*   Implementé un API Gateway centralizado con estrategias de Rate Limiting y Circuit Breaker para prevenir fallos en cascada bajo alta carga.
+*   **Tecnologías:** Docker, Microservicios, Node.js, API Gateway, Chaos Engineering.
+
+**ProntoClick | Plataforma de Delivery en Tiempo Real**
+*Repositorio: github.com/MateoDumas/ProntoClick*
+*   Construí una plataforma completa de marketplace con comunicación en tiempo real entre usuarios y repartidores mediante WebSockets.
+*   Desarrollé funcionalidades críticas como geolocalización en vivo, autenticación segura y gestión de estado global optimizada.
+*   **Tecnologías:** Next.js, NestJS, Prisma, PostgreSQL, Socket.io.
+
+---
+
+## HABILIDADES (SKILLS)
+
+**Lenguajes y Core:**
+JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL, Python.
+
+**Backend y Arquitectura:**
+Node.js, Express, NestJS, Microservicios, REST APIs, Docker, PostgreSQL, MongoDB, MySQL.
+
+**Frontend Moderno:**
+React, Next.js, Redux/Zustand, Tailwind CSS, WebSockets (Socket.io).
+
+**Herramientas y Metodologías:**
+Git/GitHub, CI/CD (Básico), Postman, Linux, Metodologías Ágiles (Scrum), VS Code.
+
+**Habilidades Blandas:**
+Resolución analítica de problemas, Comunicación técnica efectiva, Autogestión y Aprendizaje continuo.
+
+---
+
+## EDUCACIÓN
+
+**Ingeniería en Sistemas de Información**
+Universidad Tecnológica Nacional (UTN) | En curso (1er Nivel)
+
+**Desarrollador Web Full Stack**
+Universidad Tecnológica Nacional | 2024
+
+**Programación con Python**
+TalentoTech | 2024
+
+**Formación Avanzada en Inglés (Nivel B2)**
+PAEV | 2023

@@ -1,5 +1,25 @@
 export const projects = [
   {
+    id: 'boardwave',
+    title: 'BoardWave',
+    logoUrl: '/logos/boardwave.svg',
+    role: 'Full Stack Developer',
+    description: 'Plataforma colaborativa de gestión de proyectos con funcionalidades en tiempo real.',
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'Prisma', 'PostgreSQL'],
+    type: 'fullstack',
+    repoUrl: 'https://github.com/MateoDumas/BoardWave',
+    demoUrl: 'https://board-wave.vercel.app/',
+    videoUrl: null,
+    fullDescription: 'BoardWave es una solución integral para la gestión de tareas y proyectos, inspirada en herramientas como Trello. Permite a los equipos colaborar en tiempo real, organizar flujos de trabajo en tableros visuales y gestionar el progreso de manera eficiente. Construida con un stack moderno centrado en el rendimiento y la experiencia de usuario.',
+    features: [
+      'Tableros Kanban interactivos con Drag-and-Drop',
+      'Colaboración y actualizaciones en tiempo real',
+      'Gestión de Espacios de Trabajo y Miembros',
+      'Autenticación segura y gestión de roles',
+      'Interfaz moderna y responsiva'
+    ]
+  },
+  {
     id: 'billforge',
     title: 'BillForge',
     logoUrl: '/logos/billforge.svg',
