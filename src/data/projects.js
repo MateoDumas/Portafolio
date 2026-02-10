@@ -145,7 +145,7 @@ export const projects = [
   {
     id: 'cyberretro',
     title: 'CyberRetro',
-    logoUrl: '/logos/cyberretro.svg',
+    logoUrl: '/logos/cyberretro.svg?v=2',
     role: 'Frontend Developer',
     description:
       'Landing page nostálgica con estética Y2K/90s y efectos visuales modernos con CSS puro.',
