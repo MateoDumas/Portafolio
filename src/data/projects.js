@@ -209,7 +209,7 @@ export const projects = [
   {
     id: 'obitdata',
     title: 'ObitData Dashboard',
-    logoUrl: '/logos/obitdata.svg',
+    logoUrl: '/logos/obitdata.svg?v=2',
     role: 'Frontend Developer',
     description: 'Dashboard en tiempo real para visualización de métricas con React + Vite + TypeScript.',
     tags: ['React', 'TypeScript', 'D3.js', 'WebSocket', 'Zustand'],
