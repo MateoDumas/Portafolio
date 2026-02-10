@@ -42,7 +42,7 @@ export const projects = [
   {
     id: 'billforge',
     title: 'BillForge',
-    logoUrl: '/logos/billforge.svg?v=2',
+    logoUrl: '/logos/billforge.svg?v=3',
     role: 'Backend Engineer',
     description:
       'Infraestructura de facturación SaaS headless con gestión de suscripciones y panel de control.',
