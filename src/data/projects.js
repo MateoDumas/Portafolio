@@ -229,7 +229,7 @@ export const projects = [
   {
     id: 'pulseboard',
     title: 'PulseBoard PWA',
-    logoUrl: '/logos/pulseboard.svg',
+    logoUrl: '/logos/pulseboard.svg?v=2',
     role: 'Frontend Developer',
     description: 'Progressive Web App (PWA) moderna con capacidades offline y actualizaciones en tiempo real.',
     tags: ['React', 'Vite', 'PWA', 'Socket.io', 'Node.js'],
