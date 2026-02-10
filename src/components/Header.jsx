@@ -5,7 +5,8 @@ import LanguageSelector from './LanguageSelector'
 
 function Header({ activeSection, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const cvUrl = i18n.language.startsWith('es') ? '/cv_es.pdf' : '/cv_en.pdf'
 
   const handleNavigate = (sectionId) => {
     onNavigate(sectionId)
@@ -74,7 +75,7 @@ function Header({ activeSection, onNavigate }) {
             {t('nav.contact')}
           </button>
           <a
-            href="/cv.pdf"
+            href={cvUrl}
             className="nav-link"
             target="_blank"
             rel="noreferrer"

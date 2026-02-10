@@ -2,7 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
 function Hero({ onContactClick, onProjectsClick }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const cvUrl = i18n.language.startsWith('es') ? '/cv_es.pdf' : '/cv_en.pdf'
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -53,7 +54,7 @@ function Hero({ onContactClick, onProjectsClick }) {
             >
               {t('hero.cta_secondary')}
             </a>
-            <a href="/cv.pdf" className="button ghost subtle" target="_blank" rel="noreferrer">
+            <a href={cvUrl} className="button ghost subtle" target="_blank" rel="noreferrer">
               {t('hero.cta_cv')}
             </a>
           </motion.div>
