@@ -7,15 +7,33 @@ function Skills() {
   const skills = [
     {
       category: t('skills.categories.frontend'),
-      items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'GSAP', 'Tailwind'],
+      items: [
+        'React',
+        'Next.js',
+        'TypeScript',
+        'JavaScript',
+        'Tailwind',
+        'Three.js',
+        'Zustand',
+        'HTML5/CSS3',
+      ],
     },
     {
       category: t('skills.categories.backend'),
-      items: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL', 'MySQL'],
+      items: [
+        'Node.js',
+        'NestJS',
+        'GraphQL',
+        'Prisma',
+        'PostgreSQL',
+        'MongoDB',
+        'WebRTC',
+        'Socket.io',
+      ],
     },
     {
       category: t('skills.categories.tools'),
-      items: ['Git/GitHub', 'Docker', 'VS Code', 'Postman', 'Vercel', 'Terminal'],
+      items: ['Git/GitHub', 'Docker', 'AWS', 'Vercel', 'Postman', 'Linux'],
     },
     {
       category: t('skills.categories.soft'),
