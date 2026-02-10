@@ -103,7 +103,7 @@ export const projects = [
   {
     id: 'prontoclick',
     title: 'ProntoClick',
-    logoUrl: '/logos/prontoclick.svg',
+    logoUrl: '/logos/prontoclick.svg?v=2',
     role: 'Full Stack Developer',
     description:
       'Plataforma integral de delivery y marketplace con chat en tiempo real y geolocalización.',
