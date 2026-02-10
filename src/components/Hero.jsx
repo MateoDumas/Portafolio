@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 function Hero({ onContactClick, onProjectsClick }) {
   const { t, i18n } = useTranslation()
-  const cvUrl = i18n.language.startsWith('es') ? '/cv_es.pdf' : '/cv_en.pdf'
+  const cvUrl = `${import.meta.env.BASE_URL}${i18n.language.startsWith('es') ? 'cv_es.pdf' : 'cv_en.pdf'}`
 
   const containerVariants = {
     hidden: { opacity: 0 },
