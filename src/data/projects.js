@@ -186,7 +186,7 @@ export const projects = [
   {
     id: 'aivio',
     title: 'Aivio AI Backend',
-    logoUrl: '/logos/aivio.svg',
+    logoUrl: '/logos/aivio.svg?v=2',
     role: 'Backend & ML Engineer',
     description:
       'Plataforma backend de IA con APIs REST y sección de documentación para desarrolladores.',
