@@ -16,16 +16,34 @@ function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (!formData.name || !formData.email || !formData.message) {
       setStatus('error')
       return
     }
-    // Simulación de envío
-    setStatus('success')
-    setFormData({ name: '', email: '', message: '' })
-    setTimeout(() => setStatus(null), 3000)
+
+    setStatus('loading')
+
+    try {
+      const response = await fetch('https://formspree.io/f/xyzkpvww', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+        setTimeout(() => setStatus(null), 5000)
+      } else {
+        setStatus('error')
+      }
+    } catch (error) {
+      setStatus('error')
+    }
   }
 
   return (
@@ -83,8 +101,12 @@ function Contact() {
               required
             />
           </div>
-          <button type="submit" className="button primary full-width">
-            {t('contact.form.submit')}
+          <button 
+            type="submit" 
+            className={`button primary full-width ${status === 'loading' ? 'loading' : ''}`}
+            disabled={status === 'loading'}
+          >
+            {status === 'loading' ? t('contact.form.sending') || 'Enviando...' : t('contact.form.submit')}
           </button>
           {status === 'error' && (
             <p className="form-message error" role="alert">
