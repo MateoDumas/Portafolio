@@ -38,9 +38,12 @@ function ProjectDetail() {
     }
     // Handle local video paths for GitHub Pages
     if (url.startsWith('/')) {
+      // Use direct path for production and development
       const base = import.meta.env.BASE_URL || '/'
       const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base
-      return `${cleanBase}${url}`
+      const fullUrl = `${cleanBase}${url}`
+      console.log('Video full URL:', fullUrl)
+      return fullUrl
     }
     return url
   }
@@ -155,6 +158,7 @@ function ProjectDetail() {
                   </div>
                 ) : (
                   <video 
+                    key={videoSrc}
                     controls 
                     playsInline 
                     preload="auto" 
