@@ -9,7 +9,7 @@ export const projects = [
     type: 'fullstack',
     repoUrl: 'https://github.com/MateoDumas2/StayFlow',
     demoUrl: 'https://stay-flow-frontend.vercel.app/',
-    videoUrl: null,
+    videoUrl: '/videos/StayFlowShowcase.mp4',
     fullDescription: 'StayFlow es una solución Full Stack diseñada para eliminar la fricción en la planificación de viajes grupales. A diferencia de las plataformas tradicionales, integra herramientas sociales y de inteligencia artificial para crear una experiencia de usuario fluida y personalizada. Incluye un motor de búsqueda semántico por voz, recomendaciones basadas en el estilo musical del usuario (Spotify) y un sistema nativo para dividir gastos.',
     features: [
       'AI Voice Search (Búsqueda semántica con lenguaje natural)',

@@ -104,7 +104,7 @@
       "message": "Message",
       "submit": "Send message",
       "error": "Please check the required fields before sending.",
-      "success": "Thanks for your message. This demo doesn't send emails, but the flow is ready for integration."
+      "success": "Message sent successfully! I'll get back to you soon."
     }
   },
   "projects_section": {

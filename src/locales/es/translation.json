@@ -104,7 +104,7 @@
       "message": "Mensaje",
       "submit": "Enviar mensaje",
       "error": "Revisa los campos obligatorios antes de enviar.",
-      "success": "Gracias por tu mensaje. Esta demo no envía correos, pero el flujo está listo para integrarse."
+      "success": "¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto."
     }
   },
   "projects_section": {
