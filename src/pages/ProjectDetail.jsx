@@ -38,11 +38,9 @@ function ProjectDetail() {
     }
     // Handle local video paths for GitHub Pages
     if (url.startsWith('/')) {
-      // Ensure we use the correct base path
-      const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
-        ? import.meta.env.BASE_URL.slice(0, -1) 
-        : import.meta.env.BASE_URL
-      return `${baseUrl}${url}`
+      const base = import.meta.env.BASE_URL || '/'
+      const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base
+      return `${cleanBase}${url}`
     }
     return url
   }
