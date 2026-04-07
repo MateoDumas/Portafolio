@@ -10,6 +10,7 @@ export const projects = [
     repoUrl: 'https://github.com/MateoDumas2/StayFlow',
     demoUrl: 'https://stay-flow-frontend.vercel.app/',
     videoUrl: '/videos/StayFlowShowcase.mp4',
+    video_url: '/videos/StayFlowShowcase.mp4',
     fullDescription: 'StayFlow es una solución Full Stack diseñada para eliminar la fricción en la planificación de viajes grupales. A diferencia de las plataformas tradicionales, integra herramientas sociales y de inteligencia artificial para crear una experiencia de usuario fluida y personalizada. Incluye un motor de búsqueda semántico por voz, recomendaciones basadas en el estilo musical del usuario (Spotify) y un sistema nativo para dividir gastos.',
     features: [
       'AI Voice Search (Búsqueda semántica con lenguaje natural)',
@@ -30,6 +31,7 @@ export const projects = [
     repoUrl: 'https://github.com/MateoDumas/BoardWave',
     demoUrl: 'https://board-wave.vercel.app/',
     videoUrl: '/videos/BoardwaveVideo.mp4?v=1',
+    video_url: '/videos/BoardwaveVideo.mp4?v=1',
     fullDescription: 'BoardWave es una aplicación web full-stack diseñada para facilitar la colaboración remota. Permite a múltiples usuarios conectarse en salas de reuniones virtuales con transmisión de audio y video de baja latencia utilizando una arquitectura SFU (Selective Forwarding Unit). Además de la comunicación AV, integra una pizarra colaborativa sincronizada en tiempo real, chat con transferencia de archivos y capacidad de compartir pantalla, todo envuelto en una interfaz moderna y responsiva.',
     features: [
       'Videoconferencia Escalable (SFU con Mediasoup)',

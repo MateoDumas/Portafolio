@@ -48,14 +48,16 @@ function ProjectDetail() {
     return url
   }
 
-  const displayVideoUrl = project.videoUrl || (t(`projects.${project.id}.videoUrl`) !== `projects.${project.id}.videoUrl` ? t(`projects.${project.id}.videoUrl`) : null)
+  const displayVideoUrl = project.videoUrl || project.video_url || (t(`projects.${project.id}.videoUrl`) !== `projects.${project.id}.videoUrl` ? t(`projects.${project.id}.videoUrl`) : null)
   const videoSrc = getEmbedUrl(displayVideoUrl)
   const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'))
 
   useEffect(() => {
+    alert(`DEBUG VIDEO: displayVideoUrl=${displayVideoUrl}, videoSrc=${videoSrc}`)
     console.log('--- DEBUG VIDEO ---')
     console.log('Project ID:', id)
     console.log('Project videoUrl from JS:', project.videoUrl)
+    console.log('Project video_url (SNAKE) from JS:', project.video_url)
     console.log('Translation key:', `projects.${project.id}.videoUrl`)
     console.log('Translation value:', t(`projects.${project.id}.videoUrl`))
     console.log('Final displayVideoUrl:', displayVideoUrl)
