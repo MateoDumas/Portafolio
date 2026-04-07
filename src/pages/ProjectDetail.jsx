@@ -39,7 +39,7 @@ function ProjectDetail() {
     // Handle local video paths for GitHub Pages
     if (url.startsWith('/')) {
       // Use direct path for production and development
-      const base = import.meta.env.BASE_URL || ''
+      const base = import.meta.env.BASE_URL || '/Portafolio/'
       const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base
       const fullUrl = `${cleanBase}${url}`
       return fullUrl
