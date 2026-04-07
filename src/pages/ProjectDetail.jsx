@@ -92,6 +92,9 @@ function ProjectDetail() {
 
   return (
     <PageTransition>
+      <div style={{ background: '#ff0000', color: 'white', padding: '1rem', textAlign: 'center', fontWeight: 'bold' }}>
+        ¡SI VES ESTO, EL CÓDIGO SE ACTUALIZÓ!
+      </div>
       <Header activeSection="projects" onNavigate={() => navigate('/')} />
       
       <main className="project-detail">
