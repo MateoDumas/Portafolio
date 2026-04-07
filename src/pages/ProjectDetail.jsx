@@ -48,8 +48,9 @@ function ProjectDetail() {
     return url
   }
 
-  const videoSrc = getEmbedUrl(project.videoUrl)
-  const isYouTube = project.videoUrl && (project.videoUrl.includes('youtube.com') || project.videoUrl.includes('youtu.be'))
+  const videoSrc = getEmbedUrl(project.videoUrl || t(`projects.${project.id}.videoUrl`))
+  const displayVideoUrl = project.videoUrl || t(`projects.${project.id}.videoUrl`)
+  const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'))
 
   // Fetch translations for dynamic content
   const projectTitle = t(`projects.${project.id}.title`)
@@ -144,7 +145,7 @@ function ProjectDetail() {
               </div>
             </header>
 
-            {project.videoUrl && (
+            {displayVideoUrl && (
               <motion.div variants={itemVariants} id="project-video" className="project-video-container" style={{ marginBottom: '4rem', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
                 {isYouTube ? (
                   <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>

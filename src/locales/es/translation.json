@@ -131,6 +131,7 @@
     "stayflow": {
       "title": "StayFlow",
       "role": "Full Stack Developer",
+      "videoUrl": "/videos/StayFlowShowcase.mp4",
       "description": "Solución Full Stack para viajes grupales con búsqueda por voz IA, Spotify Vibe Match y Split Pay.",
       "fullDescription": "StayFlow es una solución Full Stack diseñada para eliminar la fricción en la planificación de viajes grupales. A diferencia de las plataformas tradicionales, integra herramientas sociales y de inteligencia artificial para crear una experiencia de usuario fluida y personalizada. Incluye un motor de búsqueda semántico por voz, recomendaciones basadas en el estilo musical del usuario (Spotify) y un sistema nativo para dividir gastos.",
       "features": [
@@ -144,6 +145,7 @@
     "boardwave": {
       "title": "BoardWave",
       "role": "Full Stack Developer",
+      "videoUrl": "/videos/BoardwaveVideo.mp4?v=1",
       "description": "Plataforma de colaboración remota con videoconferencia SFU y pizarra en tiempo real.",
       "fullDescription": "BoardWave es una aplicación web full-stack diseñada para facilitar la colaboración remota. Permite a múltiples usuarios conectarse en salas de reuniones virtuales con transmisión de audio y video de baja latencia utilizando una arquitectura SFU (Selective Forwarding Unit). Además de la comunicación AV, integra una pizarra colaborativa sincronizada en tiempo real, chat con transferencia de archivos y capacidad de compartir pantalla, todo envuelto en una interfaz moderna y responsiva.",
       "features": [
@@ -196,6 +198,7 @@
     "prontoclick": {
       "title": "ProntoClick",
       "role": "Full Stack Developer",
+      "videoUrl": "/videos/prontoclick.mp4",
       "description": "Plataforma integral de delivery y marketplace con chat en tiempo real y geolocalización.",
       "fullDescription": "Plataforma Full-Stack de delivery y marketplace construida con una arquitectura moderna y escalable. Este proyecto demuestra mi capacidad para manejar lógica de negocio compleja, autenticación segura y gestión de estado en tiempo real. Integra un backend robusto en NestJS con Prisma ORM y base de datos PostgreSQL. El frontend en Next.js prioriza la velocidad y el SEO. Implementé WebSockets para el chat y geolocalización, solucionando el desafío de la comunicación instantánea entre actores.",
       "features": [
@@ -209,6 +212,7 @@
     "holoself": {
       "title": "HoloSelf",
       "role": "Frontend Developer",
+      "videoUrl": "/videos/holoself.mp4",
       "description": "Catálogo interactivo 3D y de Realidad Aumentada (AR) para visualización de productos en web.",
       "fullDescription": "Aplicación inmersiva que lleva el comercio electrónico al siguiente nivel. Este proyecto destaca mi habilidad para aprender e implementar tecnologías emergentes y complejas como WebXR y Three.js. Permite a los usuarios visualizar productos en 3D con alto detalle y proyectarlos en su entorno real. El desafío principal fue optimizar el rendimiento de los modelos 3D para asegurar una experiencia fluida incluso en dispositivos móviles.",
       "features": [
@@ -222,6 +226,7 @@
     "cyberretro": {
       "title": "CyberRetro",
       "role": "Frontend Developer",
+      "videoUrl": "/videos/cyberretro.mp4",
       "description": "Landing page nostálgica con estética Y2K/90s y efectos visuales modernos con CSS puro.",
       "fullDescription": "Un viaje al pasado con la potencia de las tecnologías web modernas. Esta landing page captura la estética única de los años 90 y 2000 (Y2K) utilizando HTML, CSS y JavaScript puro, sin dependencias pesadas. Cuenta con rastros de cursor personalizados, fondos de campos de estrellas, efectos glitch interactivos y una interfaz de usuario retro, todo optimizado para funcionar fluidamente en navegadores actuales y dispositivos móviles.",
       "features": [
@@ -235,6 +240,7 @@
     "bubbleverse": {
       "title": "BubbleVerse",
       "role": "Frontend Developer",
+      "videoUrl": "/videos/bubbleverse.mp4",
       "description": "Playground interactivo que convierte el navegador en un lienzo dinámico de burbujas flotantes.",
       "fullDescription": "Lienzo web dinámico y experimental construido con JavaScript puro. Permite a los usuarios crear burbujas flotantes que contienen mensajes inspiradores, alternar entre temas visuales de día y noche, y observar interacciones físicas de partículas. Es un proyecto centrado en la creatividad, la manipulación eficiente del DOM y la creación de animaciones fluidas y relajantes.",
       "features": [
@@ -261,6 +267,7 @@
     "obitdata": {
       "title": "ObitData Dashboard",
       "role": "Frontend Developer",
+      "videoUrl": "/videos/obitdata.mp4",
       "description": "Dashboard en tiempo real para visualización de métricas con React + Vite + TypeScript.",
       "fullDescription": "Dashboard profesional para monitoreo de datos en tiempo real. Utiliza WebSockets para streaming de datos, D3.js para visualizaciones complejas y Zustand para gestión de estado global. Incluye sistema de alertas configurable, modo oscuro/claro y diseño responsivo.",
       "features": [
@@ -274,6 +281,7 @@
     "pulseboard": {
       "title": "PulseBoard PWA",
       "role": "Frontend Developer",
+      "videoUrl": "/videos/pulseboard.mp4",
       "description": "Progressive Web App (PWA) moderna con capacidades offline y actualizaciones en tiempo real.",
       "fullDescription": "Aplicación Web Progresiva (PWA) diseñada para funcionar offline y online. Implementa Service Workers para caché avanzado, notificaciones push y sincronización en segundo plano. La interfaz es mobile-first y utiliza Socket.io para actualizaciones instantáneas.",
       "features": [
