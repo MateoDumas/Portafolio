@@ -58,17 +58,20 @@ function ProjectDetail() {
     return finalUrl;
   };
 
-  const displayVideoUrl = project.videoUrl || project.video_url;
+  const displayVideoUrl = project.videoUrl || project.video_url || t(`projects.${project.id}.videoUrl`);
   const videoSrc = getFullUrl(displayVideoUrl);
-  const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be') || displayVideoUrl.includes('drive.google.com'))
+  const isYouTube = displayVideoUrl && (
+    displayVideoUrl.includes('youtube.com') || 
+    displayVideoUrl.includes('youtu.be') || 
+    displayVideoUrl.includes('drive.google.com')
+  );
 
   useEffect(() => {
-    console.log('Video resolution:', {
-      original: displayVideoUrl,
-      resolved: videoSrc,
-      hostname: window.location.hostname
-    });
-  }, [displayVideoUrl, videoSrc]);
+    console.log('--- 📺 VIDEO DEBUG 📺 ---');
+    console.log('Project ID:', id);
+    console.log('Source URL:', displayVideoUrl);
+    console.log('Resolved Source:', videoSrc);
+  }, [id, displayVideoUrl, videoSrc]);
   const projectTitle = t(`projects.${project.id}.title`)
   const projectDescription = t(`projects.${project.id}.description`)
   const projectFullDescription = t(`projects.${project.id}.fullDescription`)
