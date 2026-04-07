@@ -47,20 +47,9 @@ function ProjectDetail() {
     return `${BASE}${cleanUrl}`;
   };
 
-  const displayVideoUrl = project.id === 'boardwave' ? '/videos/BoardwaveVideo.mp4' : (project.videoUrl || project.video_url);
+  const displayVideoUrl = project.videoUrl || project.video_url;
   const videoSrc = getFullUrl(displayVideoUrl);
   const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'));
-
-  useEffect(() => {
-    // Force alert to confirm this code is running
-    alert('DEBUG: Code V6 Loaded - Check console for paths');
-    console.error('--- 🚨 V6 CRITICAL DEBUG 🚨 ---');
-    console.error('Project ID:', id);
-    console.error('Raw displayVideoUrl:', displayVideoUrl);
-    console.error('Final videoSrc (Calculated):', videoSrc);
-    console.error('Expected URL:', window.location.origin + '/Portafolio/videos/BoardwaveVideo.mp4');
-    console.error('--- 🚨 END V6 DEBUG 🚨 ---');
-  }, [id, displayVideoUrl, videoSrc]);
 
   // Fetch translations for dynamic content
   const projectTitle = t(`projects.${project.id}.title`)
