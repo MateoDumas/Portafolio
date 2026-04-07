@@ -39,10 +39,9 @@ function ProjectDetail() {
     // Handle local video paths for GitHub Pages
     if (url.startsWith('/')) {
       // Use direct path for production and development
-      const base = import.meta.env.BASE_URL || '/'
+      const base = import.meta.env.BASE_URL || ''
       const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base
       const fullUrl = `${cleanBase}${url}`
-      console.log('Video full URL:', fullUrl)
       return fullUrl
     }
     return url
@@ -53,17 +52,16 @@ function ProjectDetail() {
   const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'))
 
   useEffect(() => {
-    alert(`DEBUG VIDEO: displayVideoUrl=${displayVideoUrl}, videoSrc=${videoSrc}`)
-    console.log('--- DEBUG VIDEO ---')
-    console.log('Project ID:', id)
-    console.log('Project videoUrl from JS:', project.videoUrl)
-    console.log('Project video_url (SNAKE) from JS:', project.video_url)
-    console.log('Translation key:', `projects.${project.id}.videoUrl`)
-    console.log('Translation value:', t(`projects.${project.id}.videoUrl`))
-    console.log('Final displayVideoUrl:', displayVideoUrl)
-    console.log('Final videoSrc:', videoSrc)
-    console.log('--- END DEBUG ---')
-  }, [id, project, displayVideoUrl, videoSrc, t])
+    // Debug for development
+    console.log('Project Details Loaded:', {
+      id,
+      title: project.title,
+      videoUrl: project.videoUrl,
+      video_url: project.video_url,
+      displayVideoUrl,
+      videoSrc
+    })
+  }, [id, project, displayVideoUrl, videoSrc])
 
   // Fetch translations for dynamic content
   const projectTitle = t(`projects.${project.id}.title`)
