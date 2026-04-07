@@ -47,21 +47,17 @@ function ProjectDetail() {
     return url
   }
 
-  const displayVideoUrl = project.videoUrl || project.video_url || (t(`projects.${project.id}.videoUrl`) !== `projects.${project.id}.videoUrl` ? t(`projects.${project.id}.videoUrl`) : null)
+  const displayVideoUrl = project.videoUrl || project.video_url || '/videos/BoardwaveVideo.mp4?v=1'
   const videoSrc = getEmbedUrl(displayVideoUrl)
   const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'))
 
   useEffect(() => {
-    // Debug for development
-    console.log('Project Details Loaded:', {
-      id,
-      title: project.title,
-      videoUrl: project.videoUrl,
-      video_url: project.video_url,
-      displayVideoUrl,
-      videoSrc
-    })
-  }, [id, project, displayVideoUrl, videoSrc])
+    console.log('--- CRITICAL VIDEO DEBUG ---')
+    console.log('Project ID:', id)
+    console.log('Project title:', t(`projects.${project.id}.title`))
+    console.log('Final video URL used:', displayVideoUrl)
+    console.log('Final video source:', videoSrc)
+  }, [id, displayVideoUrl, videoSrc, project.id, t])
 
   // Fetch translations for dynamic content
   const projectTitle = t(`projects.${project.id}.title`)
