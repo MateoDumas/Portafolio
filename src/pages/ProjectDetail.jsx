@@ -33,6 +33,12 @@ function ProjectDetail() {
   // Simple and robust URL resolver for GitHub Pages
   const getFullUrl = (url) => {
     if (!url) return null;
+    
+    // Handle Google Drive links to use the embeddable preview
+    if (url.includes('drive.google.com')) {
+      return url.replace('/view?usp=drive_link', '/preview').replace('/view', '/preview');
+    }
+
     if (url.startsWith('http')) {
       if (url.includes('youtube.com') || url.includes('youtu.be')) {
         const videoId = url.split('v=')[1] || url.split('/').pop();
@@ -54,7 +60,7 @@ function ProjectDetail() {
 
   const displayVideoUrl = project.videoUrl || project.video_url;
   const videoSrc = getFullUrl(displayVideoUrl);
-  const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'));
+  const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be') || displayVideoUrl.includes('drive.google.com'))
 
   useEffect(() => {
     console.log('Video resolution:', {
