@@ -47,19 +47,9 @@ function ProjectDetail() {
     return url
   }
 
-  const displayVideoUrl = project.id === 'boardwave' ? '/videos/BoardwaveVideo.mp4?v=1' : (project.videoUrl || project.video_url || (t(`projects.${project.id}.videoUrl`) !== `projects.${project.id}.videoUrl` ? t(`projects.${project.id}.videoUrl`) : null))
-  const videoSrc = getEmbedUrl(displayVideoUrl)
+  const videoSrc = getEmbedUrl(project.videoUrl || project.video_url)
+  const displayVideoUrl = project.videoUrl || project.video_url
   const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'))
-
-  useEffect(() => {
-    // Debug for development
-    console.log('Project Details Loaded:', {
-      id,
-      title: project.title,
-      displayVideoUrl,
-      videoSrc
-    })
-  }, [id, project, displayVideoUrl, videoSrc])
 
   // Fetch translations for dynamic content
   const projectTitle = t(`projects.${project.id}.title`)
