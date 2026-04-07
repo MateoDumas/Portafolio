@@ -30,7 +30,7 @@ function ProjectDetail() {
     )
   }
 
-  // Ensure the base URL includes the trailing slash for GitHub Pages
+  // Simple and robust URL resolver for GitHub Pages
   const getFullUrl = (url) => {
     if (!url) return null;
     if (url.startsWith('http')) {
@@ -41,17 +41,24 @@ function ProjectDetail() {
       return url;
     }
     
-    // GitHub Pages base path
-    const BASE = '/Portafolio';
+    // Explicitly handle the /Portafolio base path for production
+    const isProduction = window.location.hostname !== 'localhost';
+    const basePath = isProduction ? '/Portafolio' : '';
     const cleanUrl = url.startsWith('/') ? url : `/${url}`;
-    return `${BASE}${cleanUrl}`;
+    return `${basePath}${cleanUrl}`;
   };
 
   const displayVideoUrl = project.videoUrl || project.video_url;
   const videoSrc = getFullUrl(displayVideoUrl);
   const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'));
 
-  // Fetch translations for dynamic content
+  useEffect(() => {
+    console.log('Video resolution:', {
+      original: displayVideoUrl,
+      resolved: videoSrc,
+      hostname: window.location.hostname
+    });
+  }, [displayVideoUrl, videoSrc]);
   const projectTitle = t(`projects.${project.id}.title`)
   const projectDescription = t(`projects.${project.id}.description`)
   const projectFullDescription = t(`projects.${project.id}.fullDescription`)
