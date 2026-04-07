@@ -30,37 +30,37 @@ function ProjectDetail() {
     )
   }
 
-  const getEmbedUrl = (url) => {
-    if (!url) return null
-    if (url.includes('youtube.com') || url.includes('youtu.be')) {
-      const videoId = url.split('v=')[1] || url.split('/').pop()
-      return `https://www.youtube.com/embed/${videoId}`
+  // Ensure the base URL includes the trailing slash for GitHub Pages
+  const getFullUrl = (url) => {
+    if (!url) return null;
+    if (url.startsWith('http')) {
+      if (url.includes('youtube.com') || url.includes('youtu.be')) {
+        const videoId = url.split('v=')[1] || url.split('/').pop();
+        return `https://www.youtube.com/embed/${videoId}`;
+      }
+      return url;
     }
-    // Handle local video paths for GitHub Pages
-    if (url.startsWith('/')) {
-      // Use direct path for production and development
-      const base = import.meta.env.BASE_URL || '/Portafolio/'
-      const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base
-      const fullUrl = `${cleanBase}${url}`
-      return fullUrl
-    }
-    return url
-  }
+    
+    // GitHub Pages base path
+    const BASE = '/Portafolio';
+    const cleanUrl = url.startsWith('/') ? url : `/${url}`;
+    return `${BASE}${cleanUrl}`;
+  };
 
-  const videoSrc = getEmbedUrl(project.videoUrl || project.video_url)
-  const displayVideoUrl = project.videoUrl || project.video_url
-  const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'))
+  const displayVideoUrl = project.id === 'boardwave' ? '/videos/BoardwaveVideo.mp4' : (project.videoUrl || project.video_url);
+  const videoSrc = getFullUrl(displayVideoUrl);
+  const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'));
 
   useEffect(() => {
-    console.error('--- 🚨 CRITICAL VIDEO DEBUG 🚨 ---')
-    console.error('Project ID:', id)
-    console.error('BASE_URL:', import.meta.env.BASE_URL)
-    console.error('videoUrl from project object:', project.videoUrl)
-    console.error('video_url from project object:', project.video_url)
-    console.error('Final displayVideoUrl:', displayVideoUrl)
-    console.error('Final videoSrc (the source for the video tag):', videoSrc)
-    console.error('--- 🚨 END DEBUG 🚨 ---')
-  }, [id, project, displayVideoUrl, videoSrc])
+    // Force alert to confirm this code is running
+    alert('DEBUG: Code V6 Loaded - Check console for paths');
+    console.error('--- 🚨 V6 CRITICAL DEBUG 🚨 ---');
+    console.error('Project ID:', id);
+    console.error('Raw displayVideoUrl:', displayVideoUrl);
+    console.error('Final videoSrc (Calculated):', videoSrc);
+    console.error('Expected URL:', window.location.origin + '/Portafolio/videos/BoardwaveVideo.mp4');
+    console.error('--- 🚨 END V6 DEBUG 🚨 ---');
+  }, [id, displayVideoUrl, videoSrc]);
 
   // Fetch translations for dynamic content
   const projectTitle = t(`projects.${project.id}.title`)
