@@ -29,7 +29,7 @@ export const projects = [
     type: 'fullstack',
     repoUrl: 'https://github.com/MateoDumas/BoardWave',
     demoUrl: 'https://board-wave.vercel.app/',
-    videoUrl: null,
+    videoUrl: '/videos/BoardwaveVideo.mp4',
     fullDescription: 'BoardWave es una aplicación web full-stack diseñada para facilitar la colaboración remota. Permite a múltiples usuarios conectarse en salas de reuniones virtuales con transmisión de audio y video de baja latencia utilizando una arquitectura SFU (Selective Forwarding Unit). Además de la comunicación AV, integra una pizarra colaborativa sincronizada en tiempo real, chat con transferencia de archivos y capacidad de compartir pantalla, todo envuelto en una interfaz moderna y responsiva.',
     features: [
       'Videoconferencia Escalable (SFU con Mediasoup)',
