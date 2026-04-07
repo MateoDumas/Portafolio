@@ -44,8 +44,12 @@ function ProjectDetail() {
     // Explicitly handle the /Portafolio base path for production
     const isProduction = window.location.hostname !== 'localhost';
     const basePath = isProduction ? '/Portafolio' : '';
+    // Ensure the path starts with a slash
     const cleanUrl = url.startsWith('/') ? url : `/${url}`;
-    return `${basePath}${cleanUrl}`;
+    
+    // Debug for file names (case sensitivity is key on GitHub Pages)
+    const finalUrl = `${basePath}${cleanUrl}`;
+    return finalUrl;
   };
 
   const displayVideoUrl = project.videoUrl || project.video_url;
