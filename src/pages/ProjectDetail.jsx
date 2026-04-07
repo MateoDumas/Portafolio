@@ -186,6 +186,16 @@ function ProjectDetail() {
               </motion.div>
             )}
 
+            {/* DEBUG INFO - REMOVE AFTER FIXING */}
+            {project.id === 'boardwave' && (
+              <div style={{ background: '#f0f0f0', padding: '1rem', marginBottom: '2rem', borderRadius: '0.5rem', color: '#333', fontSize: '0.8rem' }}>
+                <p><strong>Debug Info:</strong></p>
+                <p>ID: {project.id}</p>
+                <p>Video URL: {displayVideoUrl}</p>
+                <p>Video Src: {videoSrc}</p>
+              </div>
+            )}
+
             <div className="project-body">
               <motion.div variants={itemVariants} className="project-info">
                 <h2>Sobre el proyecto</h2>
