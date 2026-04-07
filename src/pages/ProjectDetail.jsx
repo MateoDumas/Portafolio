@@ -51,6 +51,17 @@ function ProjectDetail() {
   const displayVideoUrl = project.videoUrl || project.video_url
   const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'))
 
+  useEffect(() => {
+    console.error('--- 🚨 CRITICAL VIDEO DEBUG 🚨 ---')
+    console.error('Project ID:', id)
+    console.error('BASE_URL:', import.meta.env.BASE_URL)
+    console.error('videoUrl from project object:', project.videoUrl)
+    console.error('video_url from project object:', project.video_url)
+    console.error('Final displayVideoUrl:', displayVideoUrl)
+    console.error('Final videoSrc (the source for the video tag):', videoSrc)
+    console.error('--- 🚨 END DEBUG 🚨 ---')
+  }, [id, project, displayVideoUrl, videoSrc])
+
   // Fetch translations for dynamic content
   const projectTitle = t(`projects.${project.id}.title`)
   const projectDescription = t(`projects.${project.id}.description`)

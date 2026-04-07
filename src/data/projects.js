@@ -22,7 +22,7 @@ export const projects = [
   },
   {
     id: 'boardwave',
-    title: 'BoardWave',
+    title: 'BoardWave (V5)',
     logoUrl: '/logos/boardwave.svg',
     role: 'Full Stack Developer',
     description: 'Plataforma de colaboración remota con videoconferencia SFU y pizarra en tiempo real.',
