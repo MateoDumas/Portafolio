@@ -48,9 +48,20 @@ function ProjectDetail() {
     return url
   }
 
-  const videoSrc = getEmbedUrl(project.videoUrl || t(`projects.${project.id}.videoUrl`))
-  const displayVideoUrl = project.videoUrl || t(`projects.${project.id}.videoUrl`)
+  const displayVideoUrl = project.videoUrl || (t(`projects.${project.id}.videoUrl`) !== `projects.${project.id}.videoUrl` ? t(`projects.${project.id}.videoUrl`) : null)
+  const videoSrc = getEmbedUrl(displayVideoUrl)
   const isYouTube = displayVideoUrl && (displayVideoUrl.includes('youtube.com') || displayVideoUrl.includes('youtu.be'))
+
+  useEffect(() => {
+    console.log('--- DEBUG VIDEO ---')
+    console.log('Project ID:', id)
+    console.log('Project videoUrl from JS:', project.videoUrl)
+    console.log('Translation key:', `projects.${project.id}.videoUrl`)
+    console.log('Translation value:', t(`projects.${project.id}.videoUrl`))
+    console.log('Final displayVideoUrl:', displayVideoUrl)
+    console.log('Final videoSrc:', videoSrc)
+    console.log('--- END DEBUG ---')
+  }, [id, project, displayVideoUrl, videoSrc, t])
 
   // Fetch translations for dynamic content
   const projectTitle = t(`projects.${project.id}.title`)
