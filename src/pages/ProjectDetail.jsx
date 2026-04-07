@@ -30,7 +30,6 @@ function ProjectDetail() {
     )
   }
 
-  // Simple and robust URL resolver for GitHub Pages
   const getFullUrl = (url) => {
     if (!url) return null;
     
@@ -50,15 +49,14 @@ function ProjectDetail() {
     // Explicitly handle the /Portafolio base path for production
     const isProduction = window.location.hostname !== 'localhost';
     const basePath = isProduction ? '/Portafolio' : '';
-    // Ensure the path starts with a slash
     const cleanUrl = url.startsWith('/') ? url : `/${url}`;
     
-    // Debug for file names (case sensitivity is key on GitHub Pages)
-    const finalUrl = `${basePath}${cleanUrl}`;
-    return finalUrl;
+    return `${basePath}${cleanUrl}`;
   };
 
-  const displayVideoUrl = project.videoUrl || project.video_url || t(`projects.${project.id}.videoUrl`);
+  // Special case for BoardWave to ensure video shows up immediately
+  const boardwaveVideo = 'https://drive.google.com/file/d/1FvFxqMTq-fZ_lIVL5oWRebAKoiTeNWsM/preview';
+  const displayVideoUrl = project.id === 'boardwave' ? boardwaveVideo : (project.videoUrl || project.video_url || t(`projects.${project.id}.videoUrl`));
   const videoSrc = getFullUrl(displayVideoUrl);
   const isYouTube = displayVideoUrl && (
     displayVideoUrl.includes('youtube.com') || 
@@ -66,12 +64,7 @@ function ProjectDetail() {
     displayVideoUrl.includes('drive.google.com')
   );
 
-  useEffect(() => {
-    console.log('--- 📺 VIDEO DEBUG 📺 ---');
-    console.log('Project ID:', id);
-    console.log('Source URL:', displayVideoUrl);
-    console.log('Resolved Source:', videoSrc);
-  }, [id, displayVideoUrl, videoSrc]);
+  // Fetch translations for dynamic content
   const projectTitle = t(`projects.${project.id}.title`)
   const projectDescription = t(`projects.${project.id}.description`)
   const projectFullDescription = t(`projects.${project.id}.fullDescription`)
