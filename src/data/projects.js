@@ -112,7 +112,7 @@ export const projects = [
     type: 'fullstack',
     repoUrl: 'https://github.com/MateoDumas/ProntoClick',
     demoUrl: 'https://pronto-click.vercel.app',
-    videoUrl: '/videos/prontoclick.mp4',
+    videoUrl: '/videos/ProntoClickDoc.mp4',
     fullDescription: 'Plataforma Full-Stack de delivery y marketplace construida con una arquitectura moderna y escalable. Este proyecto demuestra mi capacidad para manejar lógica de negocio compleja, autenticación segura y gestión de estado en tiempo real. Integra un backend robusto en NestJS con Prisma ORM y base de datos PostgreSQL. El frontend en Next.js prioriza la velocidad y el SEO. Implementé WebSockets para el chat y geolocalización, solucionando el desafío de la comunicación instantánea entre actores.',
     features: [
       'Chat en tiempo real (WebSockets) - Comunicación fluida',
