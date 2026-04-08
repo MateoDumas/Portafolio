@@ -1,5 +1,5 @@
 # Portafolio de Mateo Dumas
-Última actualización: 7 de abril de 2026
+Última actualización: 8 de abril de 2026
 
 Bienvenido al repositorio de mi portafolio personal. Este proyecto es una aplicación web moderna diseñada para mostrar mis habilidades como Desarrollador Full Stack, mis proyectos y mi trayectoria profesional.
 
