@@ -23,7 +23,7 @@ function Projects() {
 
   // Helper function to resolve asset paths for GitHub Pages
   const getAssetPath = (path) => {
-    if (!path) return null
+    if (!path || typeof path !== 'string') return null
     if (path.startsWith('http')) return path
     // Remove leading slash to avoid double slashes with BASE_URL
     const cleanPath = path.startsWith('/') ? path.slice(1) : path

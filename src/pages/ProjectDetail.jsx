@@ -31,7 +31,7 @@ function ProjectDetail() {
   }
 
   const getFullUrl = (url) => {
-    if (!url) return null;
+    if (!url || typeof url !== 'string') return null;
     
     // Handle Google Drive links to use the embeddable preview
     if (url.includes('drive.google.com')) {
@@ -54,9 +54,7 @@ function ProjectDetail() {
     return `${basePath}${cleanUrl}`;
   };
 
-  // Special case for BoardWave to ensure video shows up immediately
-  const boardwaveVideo = 'https://drive.google.com/file/d/1FvFxqMTq-fZ_lIVL5oWRebAKoiTeNWsM/preview';
-  const displayVideoUrl = project.id === 'boardwave' ? boardwaveVideo : (project.videoUrl || project.video_url || t(`projects.${project.id}.videoUrl`));
+  const displayVideoUrl = project.videoUrl || project.video_url || t(`projects.${project.id}.videoUrl`);
   const videoSrc = getFullUrl(displayVideoUrl);
   const isYouTube = displayVideoUrl && (
     displayVideoUrl.includes('youtube.com') || 

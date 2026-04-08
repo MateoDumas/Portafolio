@@ -1,8 +1,8 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import translationES from './locales/es/translation.json';
-import translationEN from './locales/en/translation.json';
+import translationES from './locales/es/translation.json' with { type: 'json' };
+import translationEN from './locales/en/translation.json' with { type: 'json' };
 
 i18n
   // detect user language
@@ -15,6 +15,7 @@ i18n
   .init({
     debug: true,
     fallbackLng: 'es',
+    lng: 'es', // Explicitly set default language to avoid undefined issues during early render
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
