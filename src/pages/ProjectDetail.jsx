@@ -92,9 +92,6 @@ function ProjectDetail() {
 
   return (
     <PageTransition>
-      <div style={{ background: '#ff0000', color: 'white', padding: '1rem', textAlign: 'center', fontWeight: 'bold' }}>
-        ¡SI VES ESTO, EL CÓDIGO SE ACTUALIZÓ!
-      </div>
       <Header activeSection="projects" onNavigate={() => navigate('/')} />
       
       <main className="project-detail">
@@ -187,16 +184,6 @@ function ProjectDetail() {
                   </video>
                 )}
               </motion.div>
-            )}
-
-            {/* DEBUG INFO - REMOVE AFTER FIXING */}
-            {project.id === 'boardwave' && (
-              <div style={{ background: '#f0f0f0', padding: '1rem', marginBottom: '2rem', borderRadius: '0.5rem', color: '#333', fontSize: '0.8rem' }}>
-                <p><strong>Debug Info:</strong></p>
-                <p>ID: {project.id}</p>
-                <p>Video URL: {displayVideoUrl}</p>
-                <p>Video Src: {videoSrc}</p>
-              </div>
             )}
 
             <div className="project-body">
